@@ -7,7 +7,6 @@ permalink:        pretty
 
 # Setup
 title:            John Hannagan
-tagline:          The Jekyll Butler
 url:              http://johnhannagan.com
 paginate:         4
 baseurl:          /
@@ -22,15 +21,15 @@ github:
   repo:           https://github.com/poole/poole
 
 #navbar pages
-pages_list:       
-  About: '/about'
-  Archive: '/archive'
+pages_list:
+  Posts: '/archive'
+  Photography: 'https://www.flickr.com/photos/77862175@N06/'
   Feed: '/atom.xml'
-  
- #defaults
- defaults: 
-	-
-		scope:
-			type: "post"
-		values:
-			comments: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      comments: true
