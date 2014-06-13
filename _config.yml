@@ -9,7 +9,7 @@ permalink:        pretty
 title:            John Hannagan
 tagline:          The Jekyll Butler
 url:              http://johnhannagan.com
-paginate:         1
+paginate:         4
 baseurl:          /
 author:
   name:           John Hannagan
@@ -20,3 +20,9 @@ author:
 version:          1.0.0
 github:
   repo:           https://github.com/poole/poole
+
+#navbar pages
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
