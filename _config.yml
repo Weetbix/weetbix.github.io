@@ -18,7 +18,6 @@ author:
 #navbar pages
 pages_list:
   Posts: '/archive'
-  Photos: '/photos'
 
 defaults:
   -
