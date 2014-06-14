@@ -8,17 +8,12 @@ permalink:        pretty
 # Setup
 title:            John Hannagan
 url:              http://johnhannagan.com
-paginate:         4
+paginate:         3
 baseurl:          /
 author:
   name:           John Hannagan
   url:            http://johnhannagan.com
   email:          Nope@gmail.com
-
-# Custom vars
-version:          1.0.0
-github:
-  repo:           https://github.com/poole/poole
 
 #navbar pages
 pages_list:
