@@ -32,7 +32,7 @@ new .md file in the `_posts` folder and push it to my git repository.
 
 Here's an example of a blog post .md file:
 
-{% highlight markdown %}
+```
 ---
 layout: post
 title: Up and Running
@@ -43,7 +43,7 @@ post blog entries and photos while traveling.
 
 I decided to go with using [Jekyll](http://jekyllrb.com) to build a site hosted
 on [Github Pages](https://pages.github.com/) which has a few advantages:
-{% endhighlight %}
+```
 
 You can view the full source for this site [here](https://github.com/Weetbix/weetbix.github.io)
 
