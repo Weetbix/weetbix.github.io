@@ -16,3 +16,13 @@
   color: #c0c0c0;
   text-align:center;
 }
+
+.social, .social > a
+{
+  color: #c0c0c0;
+}
+
+.social > a:hover
+{
+  color: #505050;
+}

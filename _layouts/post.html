@@ -24,6 +24,22 @@ layout: default
   </ul>
 </div>
 
+<div class="social">
+  <span>Share on</span>
+  <a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}">
+    <i class="fa fa-facebook-square fa-lg"></i>
+  </a>
+  <a title="Share on G+" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}">
+    <i class="fa fa-google-plus-square fa-lg"></i>
+  </a>
+  <a title="Share on Twitter" href="http://twitter.com/share">
+    <i class="fa fa-twitter-square fa-lg"></i>
+  </a>
+
+
+</div>
+
+
 {% if page.comments %}
 	{% include comments.html %}
 {% endif %}
