@@ -17,6 +17,10 @@
   text-align:center;
 }
 
+.social
+{
+  margin-top: 5em;
+}
 .social, .social > a
 {
   color: #c0c0c0;
@@ -25,4 +29,10 @@
 .social > a:hover
 {
   color: #505050;
+}
+
+/* Hide ugly disqus footer */
+#footer
+{
+  visibility: collapsed;
 }

@@ -8,6 +8,20 @@ layout: default
   {{ content }}
 </div>
 
+<p class="social">
+  <span>Share on</span>
+  <a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}">
+    <i class="fa fa-facebook-square fa-lg"></i>
+  </a>
+  <a title="Share on G+" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}">
+    <i class="fa fa-google-plus-square fa-lg"></i>
+  </a>
+  <a title="Share on Twitter" href="http://twitter.com/share">
+    <i class="fa fa-twitter-square fa-lg"></i>
+  </a>
+</p>
+
+{% if site.related_posts != empty %}
 <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
@@ -23,22 +37,7 @@ layout: default
     {% endfor %}
   </ul>
 </div>
-
-<div class="social">
-  <span>Share on</span>
-  <a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}">
-    <i class="fa fa-facebook-square fa-lg"></i>
-  </a>
-  <a title="Share on G+" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}">
-    <i class="fa fa-google-plus-square fa-lg"></i>
-  </a>
-  <a title="Share on Twitter" href="http://twitter.com/share">
-    <i class="fa fa-twitter-square fa-lg"></i>
-  </a>
-
-
-</div>
-
+{% endif %}
 
 {% if page.comments %}
 	{% include comments.html %}
