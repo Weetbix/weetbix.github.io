@@ -30,9 +30,3 @@
 {
   color: #505050;
 }
-
-/* Hide ugly disqus footer */
-#footer
-{
-  visibility: collapsed;
-}
