@@ -23,8 +23,7 @@ github:
 #navbar pages
 pages_list:
   Posts: '/archive'
-  Photography: 'https://www.flickr.com/photos/77862175@N06/'
-  Feed: '/atom.xml'
+  Photos: '/photos'
 
 defaults:
   -

@@ -1,0 +1,18 @@
+.masthead-title i
+{
+  color: #c0c0c0;
+  float: right;
+  margin-left: 0.5em;
+}
+
+.masthead-title i:hover
+{
+  color: #505050;
+}
+
+.footer
+{
+  margin-bottom:1em;
+  color: #c0c0c0;
+  text-align:center;
+}
