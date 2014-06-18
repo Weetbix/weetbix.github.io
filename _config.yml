@@ -18,11 +18,3 @@ author:
 #navbar pages
 pages_list:
   Posts: '/archive'
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "post"
-    values:
-      comments: true

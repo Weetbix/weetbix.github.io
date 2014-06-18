@@ -21,6 +21,10 @@ layout: default
   </a>
 </p>
 
+{% unless page.disablecomments %}
+  {% include comments.html %}
+{% endunless %}
+
 {% if site.related_posts != empty %}
 <div class="related">
   <h2>Related Posts</h2>
@@ -38,8 +42,3 @@ layout: default
   </ul>
 </div>
 {% endif %}
-
-{% unless page.disablecomments %}
-  <span>Definitely here</span>
-  {% include comments.html %}
-{% endunless %}
