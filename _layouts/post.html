@@ -39,4 +39,7 @@ layout: default
 </div>
 {% endif %}
 
-{% include comments.html %}
+{% if page.comments %}
+  <span>Definitely here</span>
+  {% include comments.html %}
+{% endif %}
