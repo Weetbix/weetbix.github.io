@@ -27,6 +27,7 @@ prose:
     _posts:
       - name: "layout"
         field:
+          label: "layout"
           element: "text"
           value: "post"
       - name: "title"
@@ -40,12 +41,8 @@ prose:
           label: "Add Tags"
           placeholder: "Choose Tags"
           options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-            - name: "Pears"
-              value: "pears"
-            - name: "Mangos"
-              value: "mangos"
+            - name: "Code"
+              value: "code"
+            - name: "Travel"
+              value: "travel"
 
