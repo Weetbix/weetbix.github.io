@@ -17,7 +17,8 @@ author:
 
 #navbar pages
 pages_list:
-  Posts: '/archive'
+  # Posts: '/archive'
+  Vietnam: '/vietnam'
   
 #prose.io settings
 prose:
