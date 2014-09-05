@@ -21,25 +21,6 @@ title: Home
   {% endfor %}
 </div>
 
-Rahrahrah
- {% assign posts = site.photoblogs | sort: 'date' %}
-  {% for post in posts %}
-    {% if post.category == 'vietnam' %}
-
-  <div class="post">
-    <h1 class="post-title">
-        {{ post.title }}
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-      
-    {{ post.content }}
-  </div>
-    {% endif %}
-  {% endfor %}
-blahblha
-
-
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
