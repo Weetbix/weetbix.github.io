@@ -3,8 +3,7 @@
 
   {% include head.html %}
 
-  <body>
-
+  <body>      
     <div class="container content">
       <div class="masthead">
         <h3 class="masthead-title">
@@ -37,5 +36,11 @@
       </div>
     </div>
 
+<script>
+$( "div.post img[title]" ).after(function (){
+    return "<span class=\"image-title\">" + this.title + "</span>";
+});
+</script>
+      
   </body>
 </html>
