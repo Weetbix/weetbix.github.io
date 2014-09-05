@@ -14,11 +14,15 @@ author:
   name:           John Hannagan
   url:            http://johnhannagan.com
   email:          Nope@gmail.com
+  
+# Set up photo blog collections
+collections:
+- photoblogs
 
 #navbar pages
 pages_list:
   # Posts: '/archive'
-  Vietnam: '/vietnam'
+  Vietnam: 'photoblogs/vietnam'
   
 #prose.io settings
 prose:
