@@ -9,8 +9,8 @@
         <h3 class="masthead-title">
           <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
 
-  		    {% for page in site.pages_list %}
-  		      <small><a href="{{ page[1]  }}">{{ page[0] }}</a></small>
+  		    {% for navitem in site.data.navbar %}
+                <small><a href="{{ navitem.url }}">{{ navitem.name }}</a></small>
   		    {% endfor %}
 
             <a title="Flickr" href="https://www.flickr.com/photos/77862175@N06/">

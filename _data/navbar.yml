@@ -1,0 +1,9 @@
+- name: Blog
+  url: "/Blog"
+  
+- name: Code
+  url: "/Code"
+  
+- name: Vietnam
+  url: "/photoblogs/vietnam"
+  

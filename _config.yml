@@ -20,9 +20,15 @@ collections:
 - photoblogs
 
 #navbar pages
+nav_bar:
+    Posts: '/archive'
+    Blog: 'blog/'
+    Vietndam: 'photobdlogs/vietnam'
+
 pages_list:
-  # Posts: '/archive'
-  Vietnam: 'photoblogs/vietnam'
+  Posts: '/archive'
+  Blog: 'blog/'
+  Vietndam: 'photobdlogs/vietnam'
   
 #prose.io settings
 prose:
