@@ -12,6 +12,11 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+    
+    <!-- JS -->
+  <script src='/public/js/jquery-2.1.4.min.js'></script>
+  <script src='/public/js/modernizr-history.js'></script>
+  <script src='/public/js/dynamicpage.js'></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
@@ -31,8 +36,6 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}atom.xml">
-    
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     
   {% include analytics.html %}
 </head>

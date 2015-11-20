@@ -27,13 +27,15 @@
         </h3>
       </div>
 
-      {{ content }}
+     <div id="main-content">
+         {{ content }}
+         <div class="footer">
+             <small>
+                 &copy; {{ site.time | date: '%Y' }} John Hannagan - powered by Jekyll
+             </small>
+         </div>
+     </div>
 
-      <div class="footer">
-        <small>
-          &copy; {{ site.time | date: '%Y' }} John Hannagan - powered by Jekyll
-        </small>
-      </div>
     </div>
 
 <script>
