@@ -1,8 +1,8 @@
 - name: Blog
-  url: "/Blog"
+  url: "/blog"
   
 - name: Code
-  url: "/Code"
+  url: "/code"
   
 - name: Vietnam
   url: "/photoblogs/vietnam"
