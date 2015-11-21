@@ -79,6 +79,10 @@ div.post img
     text-align:center;
     margin: 0px;
 }
+.photography-section .post-title
+{
+  letter-spacing: 0.5em;
+}
 
 div.photography-section
 {
