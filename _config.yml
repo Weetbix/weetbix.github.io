@@ -17,7 +17,9 @@ author:
   
 # Set up photo blog collections
 collections:
-- photoblogs
+  photoblogs:
+  projects:
+    output: true
   
 #prose.io settings
 prose:
