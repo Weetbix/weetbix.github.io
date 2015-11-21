@@ -73,6 +73,11 @@ div.post img
   color: #505050;
 }
 
+div.photography-section img
+{
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
 .photography-section > span,
 .photography-section > p
 {
@@ -83,7 +88,6 @@ div.post img
 {
   letter-spacing: 0.5em;
 }
-
 div.photography-section
 {
     margin-bottom: 5em;   
