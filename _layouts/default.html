@@ -17,7 +17,7 @@
               <i class="fa fa-flickr fa-lg"></i>
             </a>
 
-            <a title="Instagram" href="http://instagram.com/weetbixiron">
+            <a title="Instagram" href="http://instagram.com/adv_travel">
               <i class="fa fa-instagram fa-lg"></i>
             </a>
 
@@ -39,8 +39,11 @@
     </div>
 
 <script>
-$( "div.post img[title]" ).after(function (){
-    return "<span class=\"image-title\">" + this.title + "</span>";
+    //"div.post img[title]"
+    $("body").on("show hide", "div",function (){
+    
+        alert('yes');
+        //$(this).insertAfter("<span class=\"image-title\">" + this.title + "</span>");
 });
 </script>
       

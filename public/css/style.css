@@ -73,6 +73,18 @@ div.post img
   color: #505050;
 }
 
+.photography-section > span,
+.photography-section > p
+{
+    text-align:center;
+    margin: 0px;
+}
+
+div.photography-section
+{
+    margin-bottom: 5em;   
+}
+
 .video-container {
     position:relative;
     padding-bottom:56.25%;

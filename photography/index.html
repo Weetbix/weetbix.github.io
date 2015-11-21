@@ -1,0 +1,21 @@
+--- layout: default title: Photography ---
+
+<div class="photography-section">
+    <h2 class="post-title">Photoblogs</h2>
+    <p>Short stories told through photographs.</p>
+    <p><a href="/photography/vietnam/">Vietnam</a>
+    </p>
+</div>
+
+<div class="photography-section">
+    <div class="photo-posts">
+        <div class="post">
+            {% for photo in site.data.photogallery %}
+            <p>
+                <img title="{{ photo.title }}" src="{{ photo.url }}" />
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>

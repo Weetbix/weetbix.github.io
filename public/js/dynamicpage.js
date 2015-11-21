@@ -1,4 +1,6 @@
 $(function() {
+    addTitlesBelowImages();
+    
     if (Modernizr.history) {
         // Override the click event for anchors starting with /
         // This will most likely break things when linking directly
@@ -25,7 +27,17 @@ function loadContent(href){
     mainContent.fadeOut(200, function(){
         mainContent.load(href + " #main-content",
             function(){
-                mainContent.fadeIn(200);            
+                addTitlesBelowImages();
+                mainContent.fadeIn(200);           
         })
     })
+}
+
+// When showing md posts we want to add a span showing the title beneath
+// the image.
+function addTitlesBelowImages()
+{
+    $( "div.post img[title]" ).after(function (){
+        return "<span class=\"image-title\">" + this.title + "</span>";
+    });
 }
