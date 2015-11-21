@@ -1,4 +1,7 @@
---- layout: default title: Photography ---
+---
+layout: default
+title: Photography
+---
 
 <div class="photography-section">
     <h2 class="post-title">Photoblogs</h2>
@@ -9,13 +12,18 @@
 
 <div class="photography-section">
     <div class="photo-posts">
+        {% for category in site.data.photogallery %}
         <div class="post">
-            {% for photo in site.data.photogallery %}
+            <h2 class="post-title">{{ category.title }}</h2>
+            {% for photo in category.photos %}
             <p>
-                <img title="{{ photo.title }}" src="{{ photo.url }}" />
+              <a href="{{ photo.href }}">
+                <img title="{{ photo.title }}" src="{{ photo.src }}" />
+              </a>
             </p>
             {% endfor %}
         </div>
+        {% endfor %}
     </div>
 
 </div>
