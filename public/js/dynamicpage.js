@@ -3,6 +3,7 @@ $(function () {
 
     if (Modernizr.history) {
         
+        // Make sure we track the URL if the user lands on a sub page
         history.replaceState({ path: window.location.pathname }, null, null);
         
         // Override the click event for anchors starting with /
