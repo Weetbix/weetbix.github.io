@@ -2,7 +2,7 @@ html
 {
     /* Always show the scroll bar, otherwise longer pages cause
        the scroll bar to show, which changes the width of the content
-       and then affects the auto margins. tldr: makes header jump positon.
+       and then affects the auto margins. tldr: makes header jump positon. */
     overflow-y: scroll;
 }
 
