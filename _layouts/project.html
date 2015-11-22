@@ -37,3 +37,7 @@ layout: default
   {% endif %}
 {% endfor %}
 </div>
+
+{% unless page.disablecomments %}
+  {% include comments.html %}
+{% endunless %}
