@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="project_header">
+  <h2>{{ page.title }}</h2>
+  <p><i>{{ page.summary }}</i></p>
+</div>
+
+<!-- Optional video -->
+{% if page.video_url %}
+<div class="video-container">
+  <iframe src="{{ page.video_url }}" frameborder="0" allowfullscreen></iframe>
+</div>
+{% endif %}
+
+{{ content }}
+
+<span class="project_details">
+  <h3>Details</h3>
+  <dl>
+    <dd>Date: <i>{{ page.date }}</i></dd>
+    <dd>Lanauges: <i>{{ page.languages }}</i></dd>
+    <dd>Libraries: <i>{{ page.libraries }}</i></dd>
+    <dd>Team: <i>{{ page.team }}</i></dd>
+  </dl>
+</span>
+
+<div id="screenshot_files">
+{% for file in site.collections.projects.files %}
+  {% assign sub_dir = page.collection | append: "/" | append: page.foldername | append: "/screenshots/" %}
+
+  {% if file.path contains sub_dir %}
+      {% unless file.path contains "/thumbs/" %}
+        <span>{{ file.path }}</span>
+      {% endunless %}
+  {% endif %}
+{% endfor %}
+</div>

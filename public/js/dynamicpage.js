@@ -1,5 +1,6 @@
 $(function () {
     addTitlesBelowImages();
+    convertPathsToScreenshots();
 
     if (Modernizr.history) {
         
@@ -46,6 +47,7 @@ function loadContent(href) {
                 }
 
                 addTitlesBelowImages();
+                convertPathsToScreenshots();
                 mainContent.fadeIn(200);
             })
     })
@@ -57,4 +59,28 @@ function addTitlesBelowImages() {
     $("div.post img[title]").after(function () {
         return "<span class=\"image-title\">" + this.title + "</span>";
     });
+}
+
+function convertPathsToScreenshots()
+{  
+  $("#screenshot_files span").each(function(){
+     var path = $(this).text();
+
+     // Jekyll gives you the paths from the source collection dir which
+     // includes the prepended _. :( 
+     // We have:
+     // /_projects/blah/screenshots/1.jpg
+     // we want:
+     // screenshots/1.jpg
+     path = path.substr(path.indexOf("screenshots/"));
+    
+     var folder = path.substr(0, path.lastIndexOf('/') + 1);
+     var filename = path.substr(path.lastIndexOf('/') + 1);
+     var thumbPath = folder + "thumbs/thumb_" + filename;
+    
+    $(this).replaceWith($("<a data-featherlight=\"image\" href=\"" + path + "\">").prepend($("<img src=\"" + thumbPath + "\">")));
+    
+   });  
+
+  $("#screenshot_files a").featherlightGallery();
 }

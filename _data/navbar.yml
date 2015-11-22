@@ -1,9 +1,9 @@
 - name: Blog
-  url: "/blog"
+  url: "/blog/"
   
-- name: Projects
-  url: "/projectsf"
+- name: Code
+  url: "/projects/"
   
 - name: Photography
-  url: "/photography"
+  url: "/photography/"
   

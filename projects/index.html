@@ -4,6 +4,6 @@ title: Projects
 ---
 
 {% for project in site.projects %}
-<span>  {{ project.title }}</span>
+<a href="{{project.foldername}}/"><span>{{ project.title }}</span></a>
 
 {% endfor %}

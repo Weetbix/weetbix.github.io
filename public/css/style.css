@@ -116,3 +116,39 @@ div.photography-section
     width:100%;
     height:100%;
 }
+
+.project_header
+{
+  margin-bottom: 1em;
+}
+
+.project_details dd
+{
+  margin: 0;
+  padding: 0;
+}
+
+.project_details i
+{
+  color: darkgray;
+}
+
+.featherlight .featherlight-content
+{
+  background: none;
+}
+.featherlight-content img
+{
+  margin: 0;
+}
+
+.featherlight span.featherlight-close
+{
+  display: none;
+}
+
+.featherlight .featherlight-next,
+.featherlight .featherlight-previous
+{
+  background: none;
+}
