@@ -117,6 +117,7 @@ div.photography-section
     height:100%;
 }
 
+/* Project page */
 .project_header
 {
   margin-bottom: 1em;
@@ -133,13 +134,17 @@ div.photography-section
   color: darkgray;
 }
 
+.project_
+ 
+/* Lightbox stylin' */
 .featherlight .featherlight-content
 {
   background: none;
 }
 .featherlight-content img
 {
-  margin: 0;
+  margin: 0px;
+  border: 5px solid whitesmoke;
 }
 
 .featherlight span.featherlight-close
@@ -151,4 +156,27 @@ div.photography-section
 .featherlight .featherlight-previous
 {
   background: none;
+}
+
+.featherlight .featherlight-next span,
+.featherlight .featherlight-previous span
+{
+  text-shadow: none;
+  opacity: 0.65;
+}
+
+/* screenshots stylin' */
+#screenshot_files a
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+#screenshot_files img
+{
+  display: inline;
+  margin: 0px;
+  margin-bottom: 0.75em;
+  margin-right: 1em;
+    border: 5px solid whitesmoke;
 }
