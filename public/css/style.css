@@ -134,7 +134,32 @@ div.photography-section
   color: darkgray;
 }
 
-.project_
+.project_page ul ul
+{
+  margin-bottom: 0px;
+}
+
+.project_page div > ul
+{
+  padding-left: 20px;
+}
+
+div.project_preview
+{
+  display: inline-block;
+  margin: 30px;
+  
+}
+div.project_preview img
+{
+  margin: 0px;
+  border: 5px solid whitesmoke;
+  vertical-align: middle;
+}
+div.project_preview a
+{
+  display: inline;
+}
  
 /* Lightbox stylin' */
 .featherlight .featherlight-content

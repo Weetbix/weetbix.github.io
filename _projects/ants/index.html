@@ -1,0 +1,56 @@
+---
+layout: project
+title: Ants
+summary: A programmable ant simulator, written in C++ and Lua using SFML
+video_url: https://www.youtube.com/embed/YTujNFTO1zI?rel=0
+foldername: ants
+category: University
+date: Semester 2, 2009
+languages: C++ and Lua
+libraries: SFML, Boost, Luabind
+team: Individual
+---
+
+<div class="summary">
+  <h3>Summary</h3>
+  <p>This is a programmable ant simulator. Each ant can collect food, bring food back to their ant hole, fight other
+    ants, flee and so on.</p>
+
+  <p>This was created for ICT219 (Intelligent Systems) in semester 2, 2009. The project requirements were
+    very open ended, we had to create an AI based project.</p>
+
+  <p>I decided to make an ant based AI project, in the style of Sim Ant, and to compare different social strategies
+    of ants to determine the best social strategy for the particular environment the ants were in. However, I also wanted
+    to create a programmable game (similar to Guntactyx).</p> 
+
+  <p>I decided to use Lua as an embedded scripting language for the ants AI. This means the user can extend the game and
+    create their own ant AI to battle against other ants.</p>
+
+  <p>Because I wanted it to be a programmable game, I haven't completely handed control over to Lua, because I wouldn't
+    want the users programming unfair ants which move at super speeds. So in order to move and pickup food, and other
+    actions which interact with the world, the Lua files call certain C++ functions which impose restrictions. All
+    communication between other entities (attacking, finding closest ants, finding distance to an ant, picking up food etc)
+    needs to be requested through an entity management system ran on the C++ side.</p>
+
+  <p>
+    I had these goals when creating my project:</p>
+  <ul>
+    <li>Compare the social strategy of ant colonies to find the optimal strategy</li>
+    <li>Learn to program using Lua</li>
+    <li>Learn to expose an interface to Lua</li>
+    <li>Experiment with using an embeddable scripting language (Lua) to control the AI</li>
+    <li>Create an extremely flexible programmable game</li>
+  </ul>
+</div>
+
+<div class="features">
+  <h3>Features</h3>
+  <ul>
+    <li>AI ants controlled by Lua</li>
+    <li>Fully user programmable and extendable</li>
+    <li>Comes with 4 types of ants (food collectors, aggressive ants, soldiers and mixed)</li>
+    <li>Lua used to build and setup the worlds. This means users can easily create their own scenarios</li>
+    <li>Changable time scale. Fast battles or slow!</li>
+    <li>Simulations are scored. See which ants are more successful!</li>
+  </ul>
+</div>

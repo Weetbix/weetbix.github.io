@@ -1,0 +1,104 @@
+---
+layout: project
+title: Albino Engine &amp Cantankerous
+summary: The Albino Engine is a C++ and Lua game engine. Cantankerous is a hover tank game used to showcase the engine.
+video_url: http://www.youtube.com/embed/n8ZQxAYQiJk?rel=0
+foldername: albinoengine
+category: University
+date: Semester 1, 2010
+languages: C++ and Lua
+libraries: OpenGL, Boost, Lua, Luabind, Assimp, Bullet, SFML (Window handling), CML
+team: Me, David Clark
+---
+
+<div class="summary">
+  <h3>Summary</h3>
+
+  <p>The Albino Engine is a high level C++ and Lua game engine which renders hardware accelerated 3D graphics.
+    The engine has many features but one of the strongest is being completely exposed to Lua. This allows users
+    to create entire projects using the Albino Engine and Lua, without touching any C++ code.</p>
+  
+  <p>
+    This is one of the projects I am most proud of because of the amount of effort we put in and the final result. 
+  </p>
+
+  <p>The goal of this project was to create a game engine and an accompanying game which shows off the engine. 
+    This project was created for ICT311 (Advanced Games Design and Programming) in semester 1, 2010.</p>
+
+  <p>The result is the Albino Engine and a team-based hover tank game called Cantankerous</p>
+</div>
+
+<div class="features">
+  <h2>Features</h2>
+  <ul>
+    <li>Engine completely bound to Lua (lets you create games using only Lua)</li>
+    <li>Abstract rendering interface allows multiple graphics APIs for rendering (Only has an OpenGL Implementation though)</li>
+    <li>Material System for multi-texturing and pixel shaders</li>
+    <li>Scene graph
+      <ul>
+        <li>Component based (similar to Unity)</li>
+        <li>Each scene node can have various components such as: Terrain, Mesh, Camera, Light, RigidBody etc</li>
+      </ul>
+    </li>
+    <li>Terrain
+      <ul>
+        <li>On the fly LOD generation using a combination of Geometry Mipmapping and Tesselation</li>
+        <li>Special shader textures terrain based on slope and height</li>
+        <li>Ray collision detection</li>
+        <li>Terrain generation using the Fault Formation algorithm</li>
+      </ul>
+    </li>
+    <li>Physics
+      <ul>
+        <li>Bullet physics integration</li>
+        <li>Includes rigid bodies and premade Bullet vehicles</li>
+      </ul>
+    </li>
+    <li>Entities and AI
+      <ul>
+        <li>Entity system which allows users to easily extend a base entity class using either C++ or Lua</li>
+        <li>Base entities have a unique ID and a state machine instance</li>
+        <li>State machine system allows users to easily extend and create new states for entities using Lua</li>
+        <li>Inter-agent messaging system</li>
+      </ul>
+    </li>
+    <li>MD2 Key frame animation</li>
+    <li>Math classes such as 2D and 3D vectors, matrices and quaternions</li>
+    <li>Supports many file formats
+      <ul>
+        <li>3ds Max 3DS ( .3ds )</li>
+        <li>Wavefront Object ( .obj )</li>
+        <li>Quake ( .mdl, .md2, .md3 )</li>
+        <li>Doom ( .md5 )</li>
+        <li>DirectX ( .x )</li>
+        <li>And many more (see Assimp)</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="summary">
+  <h3>Cantankerous</h3>
+
+  <p>Cantankerous is the showcase game we created to display the features and power of the Albino Engine.
+    It is a team-based hover tank game, black tanks versus red tanks.</p>
+
+  <p>It was written entirely in Lua and is roughly 1100 lines of code.</p>
+</div>
+
+<div class="features">
+  <h3>Features</h3>
+  <ul>
+    <li>Physics</li>
+    <li>AI
+      <ul>
+        <li>Over 20 AI tanks fighting each other</li>
+        <li>State based AI including follow, attack, flee (etc) states</li>
+        <li>AI searchs for ammo and health when low on either</li>
+      </ul>
+    </li>
+    <li>Limited ammo and health</li>
+    <li>Health and ammo pickups</li>
+    <li>Menu system, including restart</li>
+  </ul>
+</div>

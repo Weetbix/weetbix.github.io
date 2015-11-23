@@ -3,6 +3,19 @@ layout: default
 title: Projects
 ---
 
-{% for project in site.projects %}
-<a href="/projects/{{project.foldername}}/"><span>{{ project.title }}</span></a>
+<!-- Jekyll support for sorting collections by a yaml property 
+     sucks :( so this is hardcoded for now -->
+
+<h2>Other</h2>
+<!-- Other -->
+{% assign projs = site.projects | where:"category", "Other" %}
+{% for project in projs %}
+  {% include project_thumb.html project=project %}
+{% endfor %}
+
+<h2>University</h2>
+<!-- University -->
+{% assign projs = site.projects | where:"category", "University" %}
+{% for project in projs %}
+  {% include project_thumb.html project=project %}
 {% endfor %}
