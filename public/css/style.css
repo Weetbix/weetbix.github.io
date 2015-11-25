@@ -7,6 +7,11 @@ html
 }
 
 /* Hide the sidebar unless we are on a tiny mobile screen */
+div.sidebar
+{
+  /* Fix content appearing above sidebar.*/
+  z-index: 100;
+}
 label.sidebar-toggle
 {
   visibility: visible;

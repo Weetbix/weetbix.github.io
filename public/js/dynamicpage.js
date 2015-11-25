@@ -21,6 +21,11 @@ $(function () {
             // load the content
             loadContent(_href);
         });
+      
+        // Hide the sidebar when we browse to a link.
+        $(document).on("click", "div.sidebar a", function(e) {
+          $("#sidebar-checkbox").prop('checked', false);
+        });
 
         // We need to handle the popstate event which is called
         // when the back button is pressed.
