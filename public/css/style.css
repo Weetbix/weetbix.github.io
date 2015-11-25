@@ -6,6 +6,17 @@ html
     overflow-y: scroll;
 }
 
+/* Hide the sidebar unless we are on a tiny mobile screen */
+label.sidebar-toggle
+{
+  visibility: visible;
+}
+@media (min-width: 30rem) {
+  label.sidebar-toggle {
+    visibility: collapse;
+  }
+}
+
 div.post
 {
    font-size: 20px;

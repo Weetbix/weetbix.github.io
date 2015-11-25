@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>      
-    <div class="container content">
-      <div class="masthead">
-        <h3 class="masthead-title">
+<body>
+  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+  <!-- Toggleable sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-item">
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}" title="Home">Home</a>
+
+      {% for navitem in site.data.navbar %}
+      <small><a class="sidebar-nav-item" href="{{ navitem.url }}">{{ navitem.name }}</a></small>
+      {% endfor %}
+    </nav>
+  </div>
+
+  <div class="container content">
+    <div class="masthead">
+      <h3 class="masthead-title">
           <a href="{{ site.baseurl }}" title="Home">{{ site.title }}</a>
 
   		    {% for navitem in site.data.navbar %}
@@ -25,17 +41,20 @@
               <i class="fa fa-github fa-lg"></i>
             </a>
         </h3>
-      </div>
+    </div>
 
-     <div id="main-content">
-         {{ content }}
-         <div class="footer">
-             <small>
+    <div id="main-content">
+      {{ content }}
+      <div class="footer">
+        <small>
                  &copy; {{ site.time | date: '%Y' }} John Hannagan - powered by HTML5 &amp; Jekyll
              </small>
-         </div>
-     </div>
+      </div>
+    </div>
 
-    </div>      
-  </body>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+</body>
+
 </html>
