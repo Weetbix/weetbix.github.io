@@ -12,7 +12,7 @@ title: Projects
 
 <h2>University</h2>
 <!-- University -->
-{% assign projs = site.projects | where:"category", "University" %}
+{% assign projs = site.projects | where:"category", "University" | sort:"order" %}
 {% for project in projs %}
   {% include project_thumb.html project=project %}
 {% endfor %}

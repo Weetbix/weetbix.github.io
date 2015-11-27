@@ -2,8 +2,9 @@
 layout: project
 title: Minicar Madness!
 caption: Arcade Racing
-summary: Minicar Madness is an arcade, old-school styled racer inspired by titles such as Mario Kart and Diddy Kong Racing.
+summary: Minicar Madness is an old-school arcade styled racer inspired by titles such as Mario Kart and Diddy Kong Racing.
 video_url: http://www.youtube.com/embed/EBrldbPH7so?rel=0
+order: 6
 foldername: minicarmadness
 category: University
 date: Semester 2, 2009
@@ -13,36 +14,35 @@ team: Me, David Clark, Troy Cumpsty (sound)
 ---
 
 <div class="summary">
-  <h3>Summary</h3>
-  <div class="alert">
-    <img src="award.png" /><span>This project was awarded The WA Industry Selected Games Design and Programming Prize on 31/12/2009</span>
+  <p></p>
+  <div class="message">
+    <div class="alert text-center">
+      <span><img class="badge" src="award.png" /><em>This project was awarded The WA Industry Selected Games Design and Programming Prize</em></span>
+    </div>
   </div>
-  
+  <h3>Summary</h3>
+
   <p>A fun, old-school styled racing game where the aim is to power slide! This project was completed for ICT207 (Games Design and Programming) 
     in Semester 2, 2009.</p>
 
-  <p>It was a 2-part assignment, part one involved extending the Bush Court area of the 3D world
-    which had already been created by another person. We had to model the Tavern section of the
-    university and the closest wall to the Tavern. It also involved creating the world where our game
-    is set, and the transition between the two worlds. The second assignment involved implementing the
-    rest of the Minicar Madness game.</p>
+  <p>It was a 2-part assignment, part one involved maintaining extending a legacy code base which modelled a section of the the Bush Court area at Murdoch University. We extended the 3D world and modelled the Tavern section of the university, including the closest wall to the Tavern. The second section of the assigment involved creating our game, and the transition between the two worlds.</p>
 
-  <p>The project also involved the extension, encapsulation and management of old, poor quality code. For example the
-    main.c file was over 5000 lines long and consisted of hundreds of #defines.</p>
+  <p>One of the goals of the assignment was teachinng students the extension, encapsulation and management of old, poor quality code. For example the
+    original world was built in 1 main.c file which contained over 5000 lines of code and hundreds of #defines.</p>
 </div>
 
 <div class="features">
   <h3>Features</h3>
   <ul>
     <li>Lap timer, and a ghost car showing your fastest lap</li>
-    <li>Fully multi-threaded particle system</li>
+    <li>Multi-threaded particle system</li>
     <li>Hardware-accelerated bitmap font rendering system which 
       loads AngelCode <a href="http://www.angelcode.com/products/bmfont/">Bitmap Font Generator</a> files</li>
     <li>Game states organised using a state pattern</li>
-    <li>Sphere and wall collision detection</li>
-    <li>A 3D terrain class, loaded from a heightmap</li>
-    <li>Maps are generated from a single loop of points</li>
-    <li>Tyre marks are left on the terrain</li>
+    <li>Hand rolled sphere and wall collision detection</li>
+    <li>3D terrain meshes, loaded from heightmap files</li>
+    <li>Maps are generated from a single loop of points, stored in a config file</li>
+    <li>Power sliding leaves tyre marks on the terrain</li>
     <li>Invisible checkpoints and wrong-way detection</li>
   </ul>
 </div>

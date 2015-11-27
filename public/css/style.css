@@ -212,7 +212,6 @@ div.project_preview  div.preview_img:hover
 
 div.project_preview div.caption
 {
-  background: whitesmoke;
   height: 70px;
   
   display: table-cell;
@@ -241,23 +240,13 @@ div.caption > div
 {
   text-align: center;
 }
-/*
-div.project_preview
-{
-  display: inline-block;
-  margin: 30px;
-  
-}
-div.project_preview img
-{
-  margin: 0px;
-  border: 5px solid whitesmoke;
-  vertical-align: middle;
-}
-div.project_preview a
+
+img.badge 
 {
   display: inline;
-}*/
+  margin: 0;
+  margin-right: 0.5em;
+}
  
 /* Lightbox stylin' */
 .featherlight .featherlight-content
