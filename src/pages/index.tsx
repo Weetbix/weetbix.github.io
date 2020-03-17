@@ -1,5 +1,15 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+
+const Cool = styled.div`
+  background-color: red;
+  width: 20px;
+  height: 20px;
+`;
+
+
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -21,6 +31,7 @@ export default class extends React.Component<IndexPageProps, {}> {
     return (
       <div>
         <h1>Hi people</h1>
+        <Cool>dog</Cool>
         <p>
           Welcome to your new{' '}
           <strong>{this.props.data.site.siteMetadata.title}</strong> site.
