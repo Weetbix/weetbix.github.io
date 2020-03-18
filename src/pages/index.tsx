@@ -17,13 +17,11 @@ interface IndexPageProps {
 const HomePage: React.FunctionComponent<IndexPageProps> = props => {
   return (
     <Page>
-      <h1>Hi people</h1>
-      <p>
-        Welcome to your new{" "}
-        <strong>{props.data.site.siteMetadata.title}</strong> site.
-      </p>
-      <p>Now go build something great.</p>
-      <Link to="/page-2/">Go to page 2</Link>
+      <h1>
+        I am a software engineer with over 9 years of experience in various
+        industries and technologies. Recently I enjoy bringing meaningful
+        products to life with web technologies such as Typescript & React.
+      </h1>
     </Page>
   );
 };
