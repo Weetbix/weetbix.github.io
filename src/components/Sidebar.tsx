@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Link from "gatsby-link";
 
 const SidebarContainer = styled.div`
   ul {
@@ -15,7 +16,9 @@ export default () => (
     <SidebarContent>
       <ul>
         <li>
-          <h1>Projects</h1>
+          <h1>
+            <Link to="/projects/">Projects</Link>
+          </h1>
         </li>
         <li>
           <h1>Photography</h1>

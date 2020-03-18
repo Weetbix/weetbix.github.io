@@ -25,27 +25,10 @@ div[role="group"][tabindex] {
 }
 `;
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-`;
-
-const ContentContainer = styled.div`
-  flex-basis: 0;
-  flex-grow: 999;
-  max-width: 50%;
-`;
-
 const A: React.FunctionComponent = ({ children }) => (
   <>
     <GlobalStyle />
-    <PageContainer>
-      <ContentContainer>{children}</ContentContainer>
-      <Sidebar />
-    </PageContainer>
+    {children}
   </>
 );
 
