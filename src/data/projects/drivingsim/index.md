@@ -7,7 +7,8 @@ video_url: http://www.youtube.com/embed/Ihrn9OICJlE
 order: 4
 foldername: drivingsim
 category: University
-date: Semester 1, 2011
+date: 1-1-2011
+dateVisual: Semester 1, 2011
 languages: C++
 libraries: Ogre, Raknet, Boost, MySQL
 team: Me, David Clark, Aidan Harney, Phoebe Downes

@@ -7,7 +7,8 @@ video_url: http://www.youtube.com/embed/VcyN5_KDVWc?rel=0
 order: 2
 foldername: pooldeck
 category: University
-date: Semester 2, 2010
+date: 1-6-2010
+dateVisual: Semester 2, 2010
 languages: C++, Lua &amp; Ogre
 libraries: Boost, Lua, Luabind, TinyXML, CEGUI
 team: Me, David Clark, Terje Lowe

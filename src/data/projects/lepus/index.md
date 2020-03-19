@@ -4,7 +4,8 @@ title: Lepus
 caption: Global Game Jam 2014
 foldername: lepus
 category: Other
-date: 2014
+date: 1-1-2014
+dateVisual: "2014"
 languages: C#
 libraries: Unity
 team: Me, Ben Schroeder, Craig Lonsdale, Elliot Bulmer, Nick Ballantyne, Zac Vucemillo

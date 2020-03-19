@@ -6,7 +6,8 @@ summary: Facebot is a Slack bot for facebook messenger integration
 order: 1
 foldername: facebot
 category: Other
-date: December 2015
+date: 11-12-2015
+dateVisual: December 2015
 languages: Javascript, Node
 libraries: Q, async, underscore, Postgres
 team: Individual

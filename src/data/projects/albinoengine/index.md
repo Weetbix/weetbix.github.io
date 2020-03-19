@@ -7,7 +7,8 @@ video_url: http://www.youtube.com/embed/n8ZQxAYQiJk?rel=0
 order: 2
 foldername: albinoengine
 category: University
-date: Semester 1, 2010
+date: 1-1-2010
+dateVisual: Semester 1, 2010
 languages: C++ and Lua
 libraries: OpenGL, Boost, Lua, Luabind, Assimp, Bullet, SFML (Window handling), CML
 team: Me, David Clark
