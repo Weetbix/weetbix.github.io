@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `John Hannagan`,
+    title: `John Hannagan`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-styled-components`
-  ],
-}
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`
+      }
+    },
+    "gatsby-transformer-remark"
+  ]
+};
