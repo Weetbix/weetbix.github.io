@@ -1,56 +1,57 @@
+import path from "path";
 import React, { FunctionComponent } from "react";
-import Link from "gatsby-link";
 import styled from "styled-components";
 import Page from "../components/Page";
-import {
-  ProjectsPageQuery,
-  ProjectSummaryFragFragment
-} from "../../graphql-types";
+import ProjectSummary from "../components/ProjectSummary";
+import { ProjectsPageQuery } from "../../graphql-types";
 
-type ProjectProps = ProjectSummaryFragFragment;
-
-const ProjectContainer = styled.div`
-  margin: 1em;
+const PageContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 `;
 
-const Project: FunctionComponent<ProjectProps> = ({
-  title,
-  category,
-  caption,
-  languages,
-  libraries,
-  order,
-  summary,
-  team,
-  date
-}) => {
-  return (
-    <ProjectContainer>
-      <div>{title}</div>
-      <div>{caption}</div>
-      {/* <div>{category}</div> */}
-      {/* <div>{caption}</div> */}
-      <div>{languages}</div>
-      {/* <div>{libraries}</div> */}
-      {/* <div>{order}</div> */}
-      {/* <div>{summary}</div> */}
-      {/* <div>{team}</div> */}
-      {/* <div>{date}</div> */}
-    </ProjectContainer>
-  );
-};
+const ContentContainer = styled.div`
+  flex-basis: 0;
+  flex-grow: 999;
+  max-width: 50%;
+`;
 
 type ProjectsPageProps = {
   data: ProjectsPageQuery;
 };
 
 const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
+  const projectNameFromPath = filePath => {
+    return path.basename(path.dirname(filePath));
+  };
+
   return (
     <Page>
-      <h1>projects</h1>
-      {data.allMarkdownRemark.group.map(g =>
-        g.nodes.map(n => <Project {...n.frontmatter} />)
-      )}
+      <PageContainer>
+        <ContentContainer>
+          <h1>projects</h1>
+          {data.projectSummaries.group.map(g =>
+            g.nodes.map(n => {
+              const projectName = projectNameFromPath(n.fileAbsolutePath);
+
+              const thumb = data.thumbs.nodes.find(image =>
+                image.absolutePath.match(`\/${projectName}\/`)
+              ).childImageSharp.fixed;
+
+              return (
+                <ProjectSummary
+                  title={n.frontmatter.title}
+                  summary={n.frontmatter.summary}
+                  thumb={thumb}
+                />
+              );
+            })
+          )}
+        </ContentContainer>
+      </PageContainer>
     </Page>
   );
 };
@@ -71,7 +72,10 @@ export const pageQuery = graphql`
   }
 
   query ProjectsPage {
-    allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+    projectSummaries: allMarkdownRemark(
+      sort: { fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { glob: "**/projects/**" } }
+    ) {
       group(field: frontmatter___category) {
         totalCount
         category: fieldValue
@@ -79,7 +83,20 @@ export const pageQuery = graphql`
           frontmatter {
             ...ProjectSummaryFrag
           }
+          fileAbsolutePath
         }
+      }
+    }
+    thumbs: allFile(
+      filter: { absolutePath: { glob: "**/projects/**/thumb.*" } }
+    ) {
+      nodes {
+        childImageSharp {
+          fixed(width: 125, height: 125) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+        absolutePath
       }
     }
   }
