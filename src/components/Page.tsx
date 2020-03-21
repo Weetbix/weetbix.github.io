@@ -5,8 +5,9 @@ import Sidebar from "./Sidebar";
 const GlobalStyle = createGlobalStyle`
 html, body {
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    color:   #333
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+    color:   #707070
 }
 
 h1 {

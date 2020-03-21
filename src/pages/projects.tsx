@@ -16,7 +16,13 @@ const PageContainer = styled.div`
 const ContentContainer = styled.div`
   flex-basis: 0;
   flex-grow: 999;
-  max-width: 50%;
+  max-width: 800px;
+`;
+
+const PageHeader = styled.h1`
+  line-height: 30px;
+  margin-top: 130px;
+  margin-bottom: 180px;
 `;
 
 type ProjectsPageProps = {
@@ -32,7 +38,7 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
     <Page>
       <PageContainer>
         <ContentContainer>
-          <h1>projects</h1>
+          <PageHeader>Projects</PageHeader>
           {data.projectSummaries.group.map(g =>
             g.nodes.map(n => {
               const projectName = projectNameFromPath(n.fileAbsolutePath);
@@ -45,6 +51,7 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
                 <ProjectSummary
                   title={n.frontmatter.title}
                   summary={n.frontmatter.summary}
+                  languages={n.frontmatter.languages}
                   thumb={thumb}
                 />
               );
@@ -73,7 +80,7 @@ export const pageQuery = graphql`
 
   query ProjectsPage {
     projectSummaries: allMarkdownRemark(
-      sort: { fields: [frontmatter___date] }
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { glob: "**/projects/**" } }
     ) {
       group(field: frontmatter___category) {
@@ -92,7 +99,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         childImageSharp {
-          fixed(width: 125, height: 125) {
+          fixed(width: 114, height: 114) {
             ...GatsbyImageSharpFixed
           }
         }
