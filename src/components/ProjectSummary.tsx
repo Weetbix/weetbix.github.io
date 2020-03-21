@@ -35,10 +35,10 @@ const Summary = styled.span`
   font-size: 20px;
   /* font-weight: 100; */
   /* font-weight: lighter; */
-  font-weight: 1;
+  /* font-weight: 200; */
   letter-spacing: 4px;
 
-  font: Light 25px/50px Helvetica;
+  /* font: Light 25px/50px Helvetica; */
   letter-spacing: 0.25px;
 
   margin-bottom: 10px;

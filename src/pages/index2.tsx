@@ -10,30 +10,12 @@ const PageContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100%;
-
-  h1 {
-    font-size: 25px;
-  }
 `;
 
 const ContentContainer = styled.div`
   flex-basis: 0;
   flex-grow: 999;
-  max-width: 800px;
-`;
-
-const PageHeader = styled.h1`
-  line-height: 30px;
-  margin-top: 130px;
-  margin-bottom: 180px;
-`;
-
-const LinkContainer = styled.div`
-  margin-top: 110px;
-  h1 {
-    display: inline;
-    margin-right: 30px;
-  }
+  max-width: 50%;
 `;
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
@@ -58,18 +40,8 @@ const HomePage: React.FunctionComponent<IndexPageProps> = props => {
             industries and technologies. Recently I enjoy bringing meaningful
             products to life with web technologies such as Typescript & React.
           </h1>
-          <LinkContainer>
-            <h1>
-              <Link to="/projects/">Projects</Link>
-            </h1>
-            <h1>
-              <Link to="/projects/">Photography</Link>
-            </h1>
-            <h1>
-              <Link to="/projects/">Social</Link>
-            </h1>
-          </LinkContainer>
         </ContentContainer>
+        <Sidebar />
       </PageContainer>
     </Page>
   );
@@ -78,7 +50,7 @@ const HomePage: React.FunctionComponent<IndexPageProps> = props => {
 export default HomePage;
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexQueryOld {
     site {
       siteMetadata {
         title
