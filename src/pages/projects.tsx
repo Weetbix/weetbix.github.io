@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Link from "gatsby-link";
+import styled from "styled-components";
 import Page from "../components/Page";
 import {
   ProjectsPageQuery,
@@ -8,13 +9,34 @@ import {
 
 type ProjectProps = ProjectSummaryFragFragment;
 
-const Project: FunctionComponent<ProjectProps> = ({ title, caption }) => {
+const ProjectContainer = styled.div`
+  margin: 1em;
+`;
+
+const Project: FunctionComponent<ProjectProps> = ({
+  title,
+  category,
+  caption,
+  languages,
+  libraries,
+  order,
+  summary,
+  team,
+  date
+}) => {
   return (
-    <div>
-      <span>{title}</span>
-      <br />
-      <span>{caption}</span>
-    </div>
+    <ProjectContainer>
+      <div>{title}</div>
+      <div>{caption}</div>
+      {/* <div>{category}</div> */}
+      {/* <div>{caption}</div> */}
+      <div>{languages}</div>
+      {/* <div>{libraries}</div> */}
+      {/* <div>{order}</div> */}
+      {/* <div>{summary}</div> */}
+      {/* <div>{team}</div> */}
+      {/* <div>{date}</div> */}
+    </ProjectContainer>
   );
 };
 
