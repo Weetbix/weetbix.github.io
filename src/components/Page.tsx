@@ -1,6 +1,5 @@
 import * as React from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import Sidebar from "./Sidebar";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html, body {

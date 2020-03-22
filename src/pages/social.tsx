@@ -1,7 +1,7 @@
 import * as React from "react";
-import Page from "../components/Page";
+import { FaFlickr, FaGithub, FaInstagram } from "react-icons/fa";
 import styled from "styled-components";
-import { FaGithub, FaFlickr, FaInstagram } from "react-icons/fa";
+import Page from "../components/Page";
 
 const PageContainer = styled.div`
   display: flex;

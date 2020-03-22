@@ -1,7 +1,6 @@
 import * as React from "react";
 import Link from "gatsby-link";
 import Page from "../components/Page";
-import Sidebar from "../components/Sidebar";
 import styled from "styled-components";
 
 const PageContainer = styled.div`
@@ -36,8 +35,6 @@ const LinkContainer = styled.div`
   }
 `;
 
-// Please note that you can use https://github.com/dotansimha/graphql-code-generator
-// to generate all types from graphQL schema
 interface IndexPageProps {
   data: {
     site: {

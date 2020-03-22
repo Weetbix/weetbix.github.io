@@ -1,6 +1,7 @@
+import { graphql } from "gatsby";
+import Img, { FixedObject } from "gatsby-image";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-import Img, { FixedObject } from "gatsby-image";
 
 type ProjectProps = {
   title?: string;
@@ -11,8 +12,6 @@ type ProjectProps = {
 
 const ProjectContainer = styled.div`
   display: flex;
-  /* justify-content: space-between; */
-  /* justify-content: space-around; */
   align-items: stretch;
 
   margin-bottom: 180px;
@@ -33,20 +32,10 @@ const TextContainer = styled.div`
 
 const Summary = styled.span`
   font-size: 20px;
-  /* font-weight: 100; */
-  /* font-weight: lighter; */
-  /* font-weight: 200; */
   letter-spacing: 4px;
-
-  /* font: Light 25px/50px Helvetica; */
   letter-spacing: 0.25px;
 
   margin-bottom: 10px;
-`;
-
-const Languages = styled.span`
-  font-size: 15px;
-  font-weight: 100;
 `;
 
 const ProjectSummary: FunctionComponent<ProjectProps> = ({
@@ -69,3 +58,13 @@ const ProjectSummary: FunctionComponent<ProjectProps> = ({
 };
 
 export default ProjectSummary;
+
+export const ProjectThumbnail = graphql`
+  fragment ProjectThumbnail on File {
+    childImageSharp {
+      fixed(width: 114, height: 114) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`;

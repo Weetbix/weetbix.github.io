@@ -1,9 +1,8 @@
-import path from "path";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
+import { ProjectsPageQuery } from "../../graphql-types";
 import Page from "../components/Page";
 import ProjectSummary from "../components/ProjectSummary";
-import { ProjectsPageQuery } from "../../graphql-types";
 
 const PageContainer = styled.div`
   display: flex;
@@ -30,10 +29,6 @@ type ProjectsPageProps = {
 };
 
 const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
-  const projectNameFromPath = filePath => {
-    return path.basename(path.dirname(filePath));
-  };
-
   return (
     <Page>
       <PageContainer>
@@ -41,19 +36,13 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
           <PageHeader>Projects</PageHeader>
           {data.projectSummaries.group.map(g =>
             g.nodes.map(n => {
-              const projectName = projectNameFromPath(n.fileAbsolutePath);
-
-              const thumb = data.thumbs.nodes.find(image =>
-                image.absolutePath.match(`\/${projectName}\/`)
-              ).childImageSharp.fixed;
-
               return (
                 <a href={n.fields.slug}>
                   <ProjectSummary
                     title={n.frontmatter.title}
                     summary={n.frontmatter.summary}
                     languages={n.frontmatter.languages}
-                    thumb={thumb}
+                    thumb={n.fields.thumbnail.childImageSharp.fixed}
                   />
                 </a>
               );
@@ -94,21 +83,11 @@ export const pageQuery = graphql`
           }
           fields {
             slug
-          }
-          fileAbsolutePath
-        }
-      }
-    }
-    thumbs: allFile(
-      filter: { absolutePath: { glob: "**/projects/**/thumb.*" } }
-    ) {
-      nodes {
-        childImageSharp {
-          fixed(width: 114, height: 114) {
-            ...GatsbyImageSharpFixed
+            thumbnail {
+              ...ProjectThumbnail
+            }
           }
         }
-        absolutePath
       }
     }
   }

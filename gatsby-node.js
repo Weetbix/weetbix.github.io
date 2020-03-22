@@ -21,6 +21,11 @@ const createProjectNode = (node, getNode, actions) => {
         name: `type`,
         value: `project`
       });
+      actions.createNodeField({
+        node,
+        name: `thumbnail`,
+        value: `./thumb.jpg`
+      });
     }
   }
 };
@@ -40,7 +45,6 @@ const createProjectPages = async (graphql, actions) => {
       }
     }
   `);
-
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     actions.createPage({
       path: node.fields.slug,
