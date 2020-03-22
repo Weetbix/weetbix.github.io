@@ -14,7 +14,7 @@ libraries: OpenGL, Boost, Lua, Luabind, Assimp, Bullet, SFML (Window handling), 
 team: Me, David Clark
 ---
 
-### Summary
+## Summary
 
 The Albino Engine is a high level C++ and Lua game engine which renders hardware accelerated 3D graphics. The engine has many features but one of the strongest is being completely exposed to Lua. This allows users to create entire projects in Lua with Albino Engine, without touching any C++ code.
 
@@ -22,7 +22,7 @@ The goal of this project was to create a game engine and an accompanying game wh
 
 The result is the Albino Engine and a team-based hover tank game called Cantankerous
 
-### Engine Features
+## Engine Features
 
 - Engine completely exposed to Lua (lets you create games entirely through Lua scripts)
 - Abstract rendering interface allows multiple graphics APIs to be implemented (OpenGL is the only provided implementation)
@@ -46,13 +46,13 @@ The result is the Albino Engine and a team-based hover tank game called Cantanke
 - Math library including 2D and 3D vectors, matrices and quaternions
 - Extensive file format support (.3ds, .obj, .mdl, .x and more)
 
-### Cantankerous
+## Cantankerous
 
 Cantankerous is a showcase game created to display the features and power of the Albino Engine. It is a team-based hover tank game, black tanks versus red tanks.
 
 It was written entirely in Lua and is roughly 1100 lines of code.
 
-### Features
+## Features
 
 - Physics
 - AI tanks

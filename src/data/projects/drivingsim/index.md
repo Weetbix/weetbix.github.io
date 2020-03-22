@@ -14,13 +14,13 @@ libraries: Ogre, Raknet, Boost, MySQL
 team: Me, David Clark, Aidan Harney, Phoebe Downes
 ---
 
-### Murdoch Driving Simulator
+## Murdoch Driving Simulator
 
 The Murdoch driving simulator is an on-going student project contributed to by students undertaking ICT313. ICT313 is the capstone unit of the information technology degree at Murdoch. The unit is aimed at honing project management and team work skills by pairing student teams with clients, and using agile project management techniques to deliver software which meets the clients requirements. The project also gives students experience in improving and maintaining large existing codebases.
 
 The Driving Simulator project was started in 2002, by the Department of Planning and Infrastructure. Over the years many student teams have contributed, and the project has been built with many different technologies. The purpose of the project is to provide a software solution which can be used to replace the current [Hazard Perception Test](http://mylicence.sa.gov.au/hazard-perception-test) for driving license candidates.
 
-### Features
+## Features
 
 The simulator is build with C++ and Ogre and includes many features:
 

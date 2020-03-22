@@ -13,13 +13,13 @@ libraries: Q, async, underscore, Postgres
 team: Individual
 ---
 
-### Summary
+## Summary
 
 Facebot is a Slack bot for facebook messenger integration. It allows you to link slack channels to facebook messenger, and communicate to them through slack.
 
 You can view the bot, or deploy your own at it's [Github Home](https://github.com/Weetbix/facebot).
 
-### Features
+## Features
 
 - Connect slack channel to a facebook messenger channels
 - Messages appear using friends names and profile pictures

@@ -14,13 +14,13 @@ libraries: Boost, Lua, Luabind, TinyXML, CEGUI
 team: Me, David Clark, Terje Lowe
 ---
 
-### Summary
+## Summary
 
 The goal of this project was to create a complex simulator with many different aspects including in house AI and physics. We were required to model a virtual environment from a real location on the Murdoch University campus and to write the physics engine ourselves. We chose to model the pool deck area at the student village.
 
 Our project allows you to walk around in a 3D virtual environment which replicates the student village. You are able to talk to various different AI controlled agents, what you say to them will affect how they behave and talk. You may pickup and throw objects at AI agents to knock them to the ground, at which point other agents will run to the falled agent to help them back onto their feet.
 
-### Features
+## Features
 
 - Realistic virtual world (Modelling the pool deck area at Murdoch Student Village)
 - Our own rigid body physics engine (Thysics)
