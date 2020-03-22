@@ -22,9 +22,10 @@ const ContentContainer = styled.div`
 `;
 
 const PageHeader = styled.h1`
-  line-height: 30px;
-  margin-top: 300px;
-  margin-bottom: 130px;
+  && {
+    line-height: 30px;
+    margin-top: 300px;
+  }
 `;
 
 const PhotoContainer = styled.div`
@@ -52,8 +53,8 @@ const PhotographyPage: FunctionComponent<{}> = ({}) => {
     <Page>
       <PageContainer>
         <ContentContainer>
-          <PageHeader>Photos</PageHeader>
-          <h1>Photostories</h1>
+          {/* <PageHeader>Photos</PageHeader> */}
+          <PageHeader>Photostories</PageHeader>
           <div>Short stories told through photographs</div>
           <br />
           <span>
