@@ -8,7 +8,7 @@ html, body {
     font-family: "Helvetica Neue";
     color:   #707070;
     font-weight: 200;
-    line-height: 22px;
+    line-height: 24px;
     font-size: 18px;
     letter-spacing: 1px
 }
@@ -62,6 +62,11 @@ strong {
   font-weight: 350;
 }
 
+blockquote {
+  border-left: 3px solid #DDD;
+  padding-left: 10px;
+  font-size: 16px;
+}
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
