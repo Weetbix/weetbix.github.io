@@ -24,6 +24,15 @@ const PageHeader = styled.h1`
   margin-bottom: 180px;
 `;
 
+const StyledProjectSummary = styled(ProjectSummary)`
+  margin-bottom: 180px;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+  }
+`;
+
 type ProjectsPageProps = {
   data: ProjectsPageQuery;
 };
@@ -38,7 +47,7 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
             g.nodes.map(n => {
               return (
                 <a href={n.fields.slug}>
-                  <ProjectSummary
+                  <StyledProjectSummary
                     title={n.frontmatter.title}
                     summary={n.frontmatter.summary}
                     languages={n.frontmatter.languages}

@@ -4,6 +4,7 @@ import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
 type ProjectProps = {
+  className?: string;
   title?: string;
   summary?: string;
   languages?: string;
@@ -14,7 +15,6 @@ const ProjectContainer = styled.div`
   display: flex;
   align-items: stretch;
 
-  margin-bottom: 180px;
   h1 {
     margin: 0;
     margin-bottom: auto;
@@ -42,10 +42,11 @@ const ProjectSummary: FunctionComponent<ProjectProps> = ({
   title,
   summary,
   languages,
-  thumb
+  thumb,
+  className
 }) => {
   return (
-    <ProjectContainer>
+    <ProjectContainer className={className}>
       <Img fixed={thumb} />
 
       <TextContainer>
