@@ -4,10 +4,7 @@ import Sidebar from "./Sidebar";
 
 const GlobalStyle = createGlobalStyle`
 html, body {
-    margin: 0;
-  /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif; */
-    
+    margin: 0;    
     /** Todo, build font stack */
     font-family: "Helvetica Neue";
     color:   #707070;
@@ -21,18 +18,22 @@ h1 {
     font-weight: 300;
 }
 
-a, a:visited, a:hover, a:active {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid #DDD;
-  padding-bottom: 3px;
+h1, h2, span {
+    >a, >a:visited, >a:hover, >a:active {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid #DDD;
+        padding-bottom: 3px;
 
-  :hover {
-    color: #ffc785;
-    padding-bottom: 6px;
-    transition: padding 0.1s;
-  }
+        :hover {
+            color: #ffc785;
+            padding-bottom: 6px;
+            transition: padding 0.1s;
+        }
+    }
 }
+
+
 
 html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;

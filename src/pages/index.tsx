@@ -63,7 +63,7 @@ const HomePage: React.FunctionComponent<IndexPageProps> = props => {
               <Link to="/projects">Projects</Link>
             </h1>
             <h1>
-              <Link to="/projects/">Photography</Link>
+              <Link to="/photography">Photography</Link>
             </h1>
             <h1>
               <Link to="/social">Social</Link>
