@@ -33,6 +33,10 @@ h1, h2, span {
     }
 }
 
+a {
+  text-decoration: none;
+  color: inherit
+}
 
 
 html, body, #___gatsby, #gatsby-focus-wrapper {

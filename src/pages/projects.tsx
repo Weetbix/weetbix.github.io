@@ -48,12 +48,14 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
               ).childImageSharp.fixed;
 
               return (
-                <ProjectSummary
-                  title={n.frontmatter.title}
-                  summary={n.frontmatter.summary}
-                  languages={n.frontmatter.languages}
-                  thumb={thumb}
-                />
+                <a href={n.fields.slug}>
+                  <ProjectSummary
+                    title={n.frontmatter.title}
+                    summary={n.frontmatter.summary}
+                    languages={n.frontmatter.languages}
+                    thumb={thumb}
+                  />
+                </a>
               );
             })
           )}
@@ -81,7 +83,7 @@ export const pageQuery = graphql`
   query ProjectsPage {
     projectSummaries: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { glob: "**/projects/**" } }
+      filter: { fields: { type: { eq: "project" } } }
     ) {
       group(field: frontmatter___category) {
         totalCount
@@ -89,6 +91,9 @@ export const pageQuery = graphql`
         nodes {
           frontmatter {
             ...ProjectSummaryFrag
+          }
+          fields {
+            slug
           }
           fileAbsolutePath
         }
