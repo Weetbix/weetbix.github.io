@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // Create nodes for all projects under **/projects/<name>/index.ms
@@ -11,6 +12,13 @@ const createProjectNode = (node, getNode, actions) => {
 
     if (result) {
       const slug = createFilePath({ node, getNode, basePath: `pages` });
+      const screenshots = fs
+        .readdirSync(
+          path.join(path.dirname(fileNode.absolutePath), "screenshots")
+        )
+        .filter(fileName => fileName.match(/.*\.[jpg|jpeg|png]/))
+        .map(fileName => `./screenshots/${fileName}`);
+
       actions.createNodeField({
         node,
         name: `slug`,
@@ -25,6 +33,11 @@ const createProjectNode = (node, getNode, actions) => {
         node,
         name: `thumbnail`,
         value: `./thumb.jpg`
+      });
+      actions.createNodeField({
+        node,
+        name: `screenshots`,
+        value: screenshots
       });
     }
   }
