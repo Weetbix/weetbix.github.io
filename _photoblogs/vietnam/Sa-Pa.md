@@ -7,7 +7,7 @@ date: 4-1-2014
 
 I met Pan in Sapa where we had agreed yesterday, and we began our 5 hour trek to her village. I spent 2 days with her, trekking through the mountains, learning about Hmong culture and other minorities living in the mountains.
 
-Pan is a shy 17 year old Hmong girl living in Sapa. She speaks english quite well, and knows a few other languages including Viet and Hmong. She came across as very intelligent, although she has been working since she was very young and didn't have the change to go to school. 
+Pan is a shy 17 year old Hmong girl living in Sapa. She speaks english quite well, and knows a few other languages including Viet and Hmong. She came across as very intelligent, although she has been working since she was very young and didn't have the change to go to school.
 
 ![](https://farm4.staticflickr.com/3840/14846458118_f08e9c88c2_c.jpg "Beginning the trek")
 
@@ -29,6 +29,6 @@ It was getting kind of late so I guestured that we head back down the to the hou
 
 Somehow he managed to move the buffalo up the slope and get around them. But at this point they were between me and the boy. They started moving towards me, I was genuinely scared and stepped off the trail down the slope of the mountain a little bit, just enough for the buffalo to walk along the trail. We headed back in the direction we came, with the buffalo in front of us now. Once they were out of the small trail I thought we would walk around them and back to the house, but the boy kept moving the buffalo down the mountain with us using sounds and rocks.
 
-![](https://farm4.staticflickr.com/3838/14846485337_1e39d78b76_c.jpg "The buffalo at the end of the mountain &middot; 4/1/2014")
+![](https://farm4.staticflickr.com/3838/14846485337_1e39d78b76_c.jpg "The buffalo at the end of the mountain · 4/1/2014")
 
 As we got closer to the house I was worried that the buffalo may damage something, but the boy continued to lead them towards the house. In fact all the way to the doorstep of the house where he proceeded to round the 3 buffalo into their pen. It was clear now that these buffalo belong to the family and they use them to plow the rice fields, the boy was hearding them back home.

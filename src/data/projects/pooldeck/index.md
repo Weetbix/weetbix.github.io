@@ -9,7 +9,7 @@ foldername: pooldeck
 category: University
 date: 1-6-2010
 dateVisual: Semester 2, 2010
-languages: C++, Lua &amp; Ogre
+languages: C++, Lua & Ogre
 libraries: Boost, Lua, Luabind, TinyXML, CEGUI
 team: Me, David Clark, Terje Lowe
 ---

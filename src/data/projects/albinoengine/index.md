@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Albino Engine &amp Cantankerous
+title: Albino Engine & Cantankerous
 caption: Game Engine
 summary: The Albino Engine is a C++ and Lua game engine. Cantankerous is a hover tank game used to showcase the engine.
 video_url: http://www.youtube.com/embed/n8ZQxAYQiJk?rel=0
