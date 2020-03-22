@@ -17,6 +17,7 @@ const ContentContainer = styled.div`
   flex-grow: 999;
   max-width: 800px;
   margin-top: 180px;
+  margin-bottom: 180px;
 `;
 
 const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
@@ -33,27 +34,6 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
             thumb={project.fields.thumbnail.childImageSharp.fixed}
           />
           <div dangerouslySetInnerHTML={{ __html: project.html }} />
-
-          {/* <h3>caption</h3>
-          <span>{project.details.caption}</span>
-          <h3>category</h3>
-          <span>{project.details.category}</span>
-          <h3>date</h3>
-          <span>{project.details.date}</span>
-          <h3>dateVisual</h3>
-          <span>{project.details.dateVisual}</span>
-          <h3>languages</h3>
-          <span>{project.details.languages}</span>
-          <h3>libraries</h3>
-          <span>{project.details.libraries}</span>
-          <h3>summary</h3>
-          <span>{project.details.summary}</span>
-          <h3>team</h3>
-          <span>{project.details.team}</span>
-          <h3>video_url</h3>
-          <span>{project.details.video_url}</span>
-          <h3>title</h3>
-          <span>{project.details.title}</span> */}
         </ContentContainer>
       </PageContainer>
     </Page>

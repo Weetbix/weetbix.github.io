@@ -29,7 +29,7 @@ h2, h3, h4 {
   margin-top: 65px;
 }
 
-h1, h2, h3, h4 span {
+h1, h2, h3, h4, span, p, li {
     >a, >a:visited, >a:hover, >a:active {
         color: inherit;
         text-decoration: none;
@@ -47,6 +47,19 @@ h1, h2, h3, h4 span {
 a {
   text-decoration: none;
   color: inherit
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+li > p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+strong { 
+  font-weight: 350;
 }
 
 
