@@ -46,7 +46,7 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
           {data.projectSummaries.group.map(g =>
             g.nodes.map(n => {
               return (
-                <a href={n.fields.slug}>
+                <a key={n.fields.slug} href={n.fields.slug}>
                   <StyledProjectSummary
                     title={n.frontmatter.title}
                     summary={n.frontmatter.summary}
