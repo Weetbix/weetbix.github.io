@@ -13,7 +13,16 @@ module.exports = {
         path: `${__dirname}/src/data`
       }
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-figure-caption`
+          }
+        ]
+      }
+    },
     "gatsby-plugin-graphql-codegen",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp"
