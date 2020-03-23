@@ -1,9 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
-import Img from "gatsby-image";
 import { ProjectPageQuery } from "../../graphql-types";
 import Page from "../components/Page";
 import ProjectSummary from "../components/ProjectSummary";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const PageContainer = styled.div`
   display: flex;
@@ -19,6 +20,19 @@ const ContentContainer = styled.div`
   max-width: 800px;
   margin-top: 180px;
   margin-bottom: 180px;
+
+  .image-gallery-svg {
+    height: 50px;
+  }
+  .image-gallery-icon:hover {
+    color: #ffc785;
+  }
+  .image-gallery-bullet {
+    padding: 3px;
+  }
+  div.image-gallery {
+    margin-top: 65px;
+  }
 `;
 
 const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
@@ -35,11 +49,15 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
             thumb={project.fields.thumbnail.childImageSharp.fixed}
           />
           <div dangerouslySetInnerHTML={{ __html: project.html }} />
-          {project.fields.screenshots.map(screenshot => (
-            <a href={screenshot.full.original.src}>
-              <Img fixed={screenshot.thumbnail.fixed} />
-            </a>
-          ))}
+          <ImageGallery
+            items={project.fields.screenshots.map(screenshot => ({
+              original: screenshot.childImageSharp.original.src
+            }))}
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showBullets={true}
+          />
         </ContentContainer>
       </PageContainer>
     </Page>
@@ -79,16 +97,9 @@ export const query = graphql`
           ...ProjectThumbnail
         }
         screenshots {
-          thumbnail: childImageSharp {
-            fixed(width: 150, height: 150) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-          full: childImageSharp {
+          childImageSharp {
             original {
               src
-              width
-              height
             }
           }
         }
