@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Img from "gatsby-image";
 import { ProjectPageQuery } from "../../graphql-types";
 import Page from "../components/Page";
 import ProjectSummary from "../components/ProjectSummary";
@@ -34,6 +35,11 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
             thumb={project.fields.thumbnail.childImageSharp.fixed}
           />
           <div dangerouslySetInnerHTML={{ __html: project.html }} />
+          {project.fields.screenshots.map(screenshot => (
+            <a href={screenshot.full.original.src}>
+              <Img fixed={screenshot.thumbnail.fixed} />
+            </a>
+          ))}
         </ContentContainer>
       </PageContainer>
     </Page>
@@ -54,6 +60,14 @@ export const query = graphql`
     title
   }
 
+  fragment ProjectScreenshotThumbnail on File {
+    childImageSharp {
+      fixed(width: 150, height: 150) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+
   query ProjectPage($slug: String!) {
     project: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -63,6 +77,20 @@ export const query = graphql`
       fields {
         thumbnail {
           ...ProjectThumbnail
+        }
+        screenshots {
+          thumbnail: childImageSharp {
+            fixed(width: 150, height: 150) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+          full: childImageSharp {
+            original {
+              src
+              width
+              height
+            }
+          }
         }
       }
     }
