@@ -35,6 +35,29 @@ const ContentContainer = styled.div`
   }
 `;
 
+const VideoContainer = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 65px;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const Video: React.FunctionComponent<{ src: string }> = ({ src }) => (
+  <VideoContainer>
+    <iframe src={src} frameborder="0" allowfullscreen></iframe>
+  </VideoContainer>
+);
+
 const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
   data: { project }
 }) => {
@@ -48,6 +71,9 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
             languages={project.details.languages}
             thumb={project.fields.thumbnail.childImageSharp.fixed}
           />
+          {project.details.video_url && (
+            <Video src={project.details.video_url} />
+          )}
           <div dangerouslySetInnerHTML={{ __html: project.html }} />
           <ImageGallery
             items={project.fields.screenshots.map(screenshot => ({
