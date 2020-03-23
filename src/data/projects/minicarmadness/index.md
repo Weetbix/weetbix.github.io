@@ -14,8 +14,6 @@ libraries: XNA
 team: Me, David Clark, Troy Cumpsty (sound)
 ---
 
-![](award.png)_This project was awarded The WA Industry Selected Games Design and Programming Prize_
-
 ## Summary
 
 A fun, old-school styled racing game where the aim is to power slide! This project was completed for ICT207 (Games Design and Programming) in Semester 2, 2009.
@@ -23,6 +21,8 @@ A fun, old-school styled racing game where the aim is to power slide! This proje
 It was a 2-part assignment, part one involved maintaining extending a legacy code base which modelled a section of the the Bush Court area at Murdoch University. We extended the 3D world and modelled the Tavern section of the university, including the closest wall to the Tavern. The second section of the assigment involved creating our game, and the transition between the two worlds.
 
 One of the goals of the assignment was teachinng students the extension, encapsulation and management of old, poor quality code. For example the original world was built in 1 main.c file which contained over 5000 lines of code and hundreds of #defines.
+
+_This project was awarded The WA Industry Selected Games Design and Programming Prize_
 
 ## Features
 
