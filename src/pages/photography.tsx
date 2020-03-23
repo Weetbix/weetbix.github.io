@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import Page from "../components/Page";
 import galleryData from "../data/photography/gallery.json";
+import { PhotographyPageQuery } from "../../graphql-types";
 
 const PageContainer = styled.div`
   display: flex;
@@ -48,17 +49,29 @@ const Photo: FunctionComponent<{ href: string; src: string }> = ({
   );
 };
 
-const PhotographyPage: FunctionComponent<{}> = ({}) => {
+const uppercaseFirstLetter = (str: string) => {
+  const [first, ...rest] = str;
+  return first.toUpperCase() + rest;
+};
+
+const PhotographyPage: FunctionComponent<{
+  data: PhotographyPageQuery;
+}> = ({ data: { photostories } }) => {
   return (
     <Page>
       <PageContainer>
         <ContentContainer>
-          {/* <PageHeader>Photos</PageHeader> */}
           <PageHeader>Photostories</PageHeader>
           <div>Short stories told through photographs</div>
           <br />
           <span>
-            <a>Vietnam</a>
+            {photostories.categories.map(category => {
+              return (
+                <a href={`/photography/photostories/${category}/`}>
+                  {uppercaseFirstLetter(category)}
+                </a>
+              );
+            })}
           </span>
 
           {galleryData.map(galleryCategory => (
@@ -76,3 +89,11 @@ const PhotographyPage: FunctionComponent<{}> = ({}) => {
 };
 
 export default PhotographyPage;
+
+export const pageQuery = graphql`
+  query PhotographyPage {
+    photostories: allMarkdownRemark {
+      categories: distinct(field: fields___category)
+    }
+  }
+`;
