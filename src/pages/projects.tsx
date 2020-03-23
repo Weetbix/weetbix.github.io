@@ -20,7 +20,7 @@ const ContentContainer = styled.div`
 
 const PageHeader = styled.h1`
   line-height: 30px;
-  margin-top: 300px;
+  margin-top: 180px;
   margin-bottom: 180px;
 `;
 
