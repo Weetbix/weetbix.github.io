@@ -78,7 +78,7 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
           {project.fields.screenshots?.length ? (
             <ImageGallery
               items={project.fields.screenshots.map(screenshot => ({
-                original: screenshot.childImageSharp.original.src
+                original: screenshot.publicURL
               }))}
               showThumbnails={false}
               showFullscreenButton={false}
@@ -125,11 +125,7 @@ export const query = graphql`
           ...ProjectThumbnail
         }
         screenshots {
-          childImageSharp {
-            original {
-              src
-            }
-          }
+          publicURL
         }
       }
     }
