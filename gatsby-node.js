@@ -11,12 +11,12 @@ const createProjectNode = (node, getNode, actions) => {
     const result = fileNode.relativePath.match(projectFilepathRegex);
 
     if (result) {
+      // Screenshots
       const slug = createFilePath({ node, getNode, basePath: `pages` });
       const screenshotPath = path.join(
         path.dirname(fileNode.absolutePath),
         "screenshots"
       );
-
       if (fs.existsSync(screenshotPath)) {
         const screenshots = fs
           .readdirSync(
@@ -32,6 +32,24 @@ const createProjectNode = (node, getNode, actions) => {
         });
       }
 
+      // Thumbnail
+      const thumbExt = fs.existsSync(
+        path.join(path.dirname(fileNode.absolutePath), "thumb.jpg")
+      )
+        ? "jpg"
+        : fs.existsSync(
+            path.join(path.dirname(fileNode.absolutePath), "thumb.png")
+          )
+        ? "png"
+        : null;
+      if (thumbExt) {
+        actions.createNodeField({
+          node,
+          name: `thumbnail`,
+          value: `./thumb.${thumbExt}`
+        });
+      }
+
       actions.createNodeField({
         node,
         name: `slug`,
@@ -41,11 +59,6 @@ const createProjectNode = (node, getNode, actions) => {
         node,
         name: `type`,
         value: `project`
-      });
-      actions.createNodeField({
-        node,
-        name: `thumbnail`,
-        value: `./thumb.jpg`
       });
     }
   }
