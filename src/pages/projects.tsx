@@ -2,22 +2,8 @@ import React, { FunctionComponent } from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { ProjectsPageQuery } from "../../graphql-types";
-import Page from "../components/Page";
+import CenteredPage from "../components/CenteredPage";
 import ProjectSummary from "../components/ProjectSummary";
-
-const PageContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-`;
-
-const ContentContainer = styled.div`
-  flex-basis: 0;
-  flex-grow: 999;
-  max-width: 800px;
-`;
 
 const PageHeader = styled.h1`
   line-height: 30px;
@@ -40,27 +26,23 @@ type ProjectsPageProps = {
 
 const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
   return (
-    <Page>
-      <PageContainer>
-        <ContentContainer>
-          <PageHeader>Projects</PageHeader>
-          {data.projectSummaries.group.map(g =>
-            g.nodes.map(n => {
-              return (
-                <a key={n.fields.slug} href={n.fields.slug}>
-                  <StyledProjectSummary
-                    title={n.frontmatter.title}
-                    summary={n.frontmatter.summary}
-                    languages={n.frontmatter.languages}
-                    thumb={n.fields.thumbnail?.childImageSharp?.fixed}
-                  />
-                </a>
-              );
-            })
-          )}
-        </ContentContainer>
-      </PageContainer>
-    </Page>
+    <CenteredPage>
+      <PageHeader>Projects</PageHeader>
+      {data.projectSummaries.group.map(g =>
+        g.nodes.map(n => {
+          return (
+            <a key={n.fields.slug} href={n.fields.slug}>
+              <StyledProjectSummary
+                title={n.frontmatter.title}
+                summary={n.frontmatter.summary}
+                languages={n.frontmatter.languages}
+                thumb={n.fields.thumbnail?.childImageSharp?.fixed}
+              />
+            </a>
+          );
+        })
+      )}
+    </CenteredPage>
   );
 };
 

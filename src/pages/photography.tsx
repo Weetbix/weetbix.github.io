@@ -1,26 +1,12 @@
 import React, { FunctionComponent } from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import Page from "../components/Page";
+import CenteredPage from "../components/CenteredPage";
 import galleryData from "../data/photography/gallery.json";
 import { PhotographyPageQuery } from "../../graphql-types";
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-
-  h1 {
-    margin-top: 120px;
-  }
-`;
-
-const ContentContainer = styled.div`
-  flex-basis: 0;
-  flex-grow: 999;
-  max-width: 800px;
+const Paragraph = styled.p`
+  margin-bottom: 120px;
 `;
 
 const PageHeader = styled.h1`
@@ -59,33 +45,32 @@ const PhotographyPage: FunctionComponent<{
   data: PhotographyPageQuery;
 }> = ({ data: { photostories } }) => {
   return (
-    <Page>
-      <PageContainer>
-        <ContentContainer>
-          <PageHeader>Photostories</PageHeader>
-          <div>Short stories told through photographs</div>
-          <br />
-          <span>
-            {photostories.categories.map(category => {
-              return (
-                <a href={`/photography/photostories/${category}/`}>
-                  {uppercaseFirstLetter(category)}
-                </a>
-              );
-            })}
-          </span>
+    <CenteredPage>
+      <PageHeader>Photostories</PageHeader>
+      <Paragraph>
+        <span>Short stories told through photographs</span>
+        <br />
+        <br />
+        <span>
+          {photostories.categories.map(category => {
+            return (
+              <a href={`/photography/photostories/${category}/`}>
+                {uppercaseFirstLetter(category)}
+              </a>
+            );
+          })}
+        </span>
+      </Paragraph>
 
-          {galleryData.map(galleryCategory => (
-            <>
-              <h1>{galleryCategory.title}</h1>
-              {galleryCategory.photos.map(photo => (
-                <Photo {...photo} />
-              ))}
-            </>
+      {galleryData.map(galleryCategory => (
+        <>
+          <h1>{galleryCategory.title}</h1>
+          {galleryCategory.photos.map(photo => (
+            <Photo {...photo} />
           ))}
-        </ContentContainer>
-      </PageContainer>
-    </Page>
+        </>
+      ))}
+    </CenteredPage>
   );
 };
 

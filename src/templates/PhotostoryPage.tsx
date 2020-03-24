@@ -2,20 +2,9 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { PhotostoryPageQuery } from "../../graphql-types";
-import Page from "../components/Page";
+import CenteredPage from "../components/CenteredPage";
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-`;
-
-const ContentContainer = styled.div`
-  flex-basis: 0;
-  flex-grow: 999;
-  max-width: 800px;
+const StyledPage = styled(CenteredPage)`
   margin-top: 180px;
   margin-bottom: 180px;
 
@@ -39,21 +28,17 @@ const PhotostoryPage: React.FunctionComponent<{
   data: PhotostoryPageQuery;
 }> = ({ data: { photostories } }) => {
   return (
-    <Page>
-      <PageContainer>
-        <ContentContainer>
-          {photostories.nodes.map(photostory => {
-            return (
-              <>
-                <h1>{photostory.frontmatter.title}</h1>
-                <span>{photostory.frontmatter.date}</span>
-                <div dangerouslySetInnerHTML={{ __html: photostory.html }} />
-              </>
-            );
-          })}
-        </ContentContainer>
-      </PageContainer>
-    </Page>
+    <StyledPage>
+      {photostories.nodes.map(photostory => {
+        return (
+          <>
+            <h1>{photostory.frontmatter.title}</h1>
+            <span>{photostory.frontmatter.date}</span>
+            <div dangerouslySetInnerHTML={{ __html: photostory.html }} />
+          </>
+        );
+      })}
+    </StyledPage>
   );
 };
 
