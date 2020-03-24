@@ -33,7 +33,7 @@ const PhotoContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 `;
 
 const Photo: FunctionComponent<{ href: string; src: string }> = ({
