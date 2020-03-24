@@ -7,7 +7,7 @@ video_url: https://www.youtube.com/embed/YTujNFTO1zI?rel=0
 order: 5
 foldername: ants
 category: University
-date: 1-6-2009
+date: 2009-6-1
 dateVisual: Semester 2, 2009
 languages: C++ and Lua
 libraries: SFML, Boost, Luabind

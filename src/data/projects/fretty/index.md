@@ -5,7 +5,7 @@ caption: Image Processing
 summary: An open source ImageJ plugin written in Java for 2D and 3D deconvolution of FRET images. The result of my iVEC internship
 foldername: fretty
 category: Other
-date: 1-12-2010
+date: 2010-12-1
 dateVisual: December 2010 - February 2011
 languages: Java
 libraries: ImageJ

@@ -7,7 +7,7 @@ video_url: http://www.youtube.com/embed/EBrldbPH7so?rel=0
 order: 6
 foldername: minicarmadness
 category: University
-date: 1-6-2009
+date: 2009-6-1
 dateVisual: Semester 2, 2009
 languages: OpenGL, Boost, Glut, OpenAL, GLee
 libraries: XNA

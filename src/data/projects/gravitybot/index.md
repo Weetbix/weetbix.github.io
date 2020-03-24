@@ -7,7 +7,7 @@ video_url: http://www.youtube.com/embed/4bE3q3vTNzE?rel=0
 order: 3
 foldername: gravitybot
 category: University
-date: 1-1-2010
+date: 2010-1-1
 dateVisual: Semester 1, 2010
 languages: C#
 libraries: XNA

@@ -2,7 +2,7 @@
 layout: post
 title: Sa Pa
 category: vietnam
-date: 4-1-2014
+date: 2014-4-1
 ---
 
 I met Pan in Sapa where we had agreed yesterday, and we began our 5 hour trek to her village. I spent 2 days with her, trekking through the mountains, learning about Hmong culture and other minorities living in the mountains.

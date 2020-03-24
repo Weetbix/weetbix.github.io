@@ -4,7 +4,7 @@ title: Lepus
 caption: Global Game Jam 2014
 foldername: lepus
 category: Other
-date: 1-1-2014
+date: 2014-1-1
 dateVisual: "2014"
 languages: C#
 libraries: Unity

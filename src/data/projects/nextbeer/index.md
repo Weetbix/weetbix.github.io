@@ -2,7 +2,7 @@
 title: Next Beer
 summary: The simplest pub crawling app!
 category: Other
-date: 9-1-2018
+date: 2018-9-1
 languages: Javascript, React Native, Google APIs
 ---
 
