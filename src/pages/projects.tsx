@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 import { ProjectsPageQuery } from "../../graphql-types";
 import Page from "../components/Page";
