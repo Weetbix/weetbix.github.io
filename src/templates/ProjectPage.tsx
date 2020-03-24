@@ -69,21 +69,23 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
             title={project.details.title}
             summary={project.details.summary}
             languages={project.details.languages}
-            thumb={project.fields.thumbnail.childImageSharp.fixed}
+            thumb={project.fields.thumbnail?.childImageSharp?.fixed}
           />
           {project.details.video_url && (
             <Video src={project.details.video_url} />
           )}
           <div dangerouslySetInnerHTML={{ __html: project.html }} />
-          <ImageGallery
-            items={project.fields.screenshots.map(screenshot => ({
-              original: screenshot.childImageSharp.original.src
-            }))}
-            showThumbnails={false}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showBullets={true}
-          />
+          {project.fields.screenshots?.length ? (
+            <ImageGallery
+              items={project.fields.screenshots.map(screenshot => ({
+                original: screenshot.childImageSharp.original.src
+              }))}
+              showThumbnails={false}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              showBullets={true}
+            />
+          ) : null}
         </ContentContainer>
       </PageContainer>
     </Page>

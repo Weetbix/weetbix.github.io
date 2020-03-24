@@ -38,6 +38,13 @@ const Summary = styled.span`
   margin-bottom: 10px;
 `;
 
+const THUMB_DIMENSION = 114;
+const DefaultThumbnail = styled.div`
+  width: ${THUMB_DIMENSION}px;
+  height: ${THUMB_DIMENSION}px;
+  background-color: #eee;
+`;
+
 const ProjectSummary: FunctionComponent<ProjectProps> = ({
   title,
   summary,
@@ -47,8 +54,7 @@ const ProjectSummary: FunctionComponent<ProjectProps> = ({
 }) => {
   return (
     <ProjectContainer className={className}>
-      <Img fixed={thumb} />
-
+      {thumb ? <Img fixed={thumb} /> : <DefaultThumbnail />}
       <TextContainer>
         <h1>{title}</h1>
         <Summary>{summary}</Summary>

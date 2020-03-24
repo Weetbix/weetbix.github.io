@@ -51,7 +51,7 @@ const Projects: FunctionComponent<ProjectsPageProps> = ({ data }) => {
                     title={n.frontmatter.title}
                     summary={n.frontmatter.summary}
                     languages={n.frontmatter.languages}
-                    thumb={n.fields.thumbnail.childImageSharp.fixed}
+                    thumb={n.fields.thumbnail?.childImageSharp?.fixed}
                   />
                 </a>
               );
