@@ -16,6 +16,13 @@ const LinkContainer = styled.div`
     display: inline;
     margin-right: 30px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+  }
 `;
 
 interface IndexPageProps {

@@ -8,12 +8,20 @@ const PageContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100%;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const ContentContainer = styled.div`
   flex-basis: 0;
   flex-grow: 999;
   max-width: 800px;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const CenteredPage: React.FunctionComponent<{ className?: string }> = ({
