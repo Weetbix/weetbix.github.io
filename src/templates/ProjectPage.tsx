@@ -23,6 +23,11 @@ const StyledPage = styled(CenteredPage)`
   div.image-gallery {
     margin-top: 65px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 `;
 
 const VideoContainer = styled.div`

@@ -20,6 +20,10 @@ const ProjectContainer = styled.div`
     margin-bottom: auto;
     line-height: 30px;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -28,6 +32,12 @@ const TextContainer = styled.div`
   flex-direction: column;
 
   padding-left: 30px;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    max-width: 100%;
+    margin-top: 20px;
+  }
 `;
 
 const Summary = styled.span`
