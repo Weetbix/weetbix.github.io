@@ -16,13 +16,13 @@ jobs:
 
       - name: Install Dependencies
         uses: actions/setup-node@v1
-      - run: yarn
+        run: yarn
 
       - name: Build
-      - run: yarn build
+        run: yarn build
 
       - name: Deploy
-      - run: yarn deploy
+        run: yarn deploy
 
         env:
           CI: true
