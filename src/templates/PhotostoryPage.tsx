@@ -14,6 +14,7 @@ const StyledPage = styled(CenteredPage)`
     margin: auto;
     margin-top: 65px;
     margin-bottom: 65px;
+    max-width: 100%;
   }
 
   figcaption {

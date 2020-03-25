@@ -14,6 +14,12 @@ const PageHeader = styled.h1`
     line-height: 30px;
     margin-top: 300px;
   }
+
+  @media (max-width: 768px) {
+    && {
+      margin-top: 80px;
+    }
+  }
 `;
 
 const PhotoContainer = styled.div`
@@ -21,6 +27,10 @@ const PhotoContainer = styled.div`
   flex-direction: column;
   text-align: center;
   margin-bottom: 200px;
+
+  img {
+    max-width: 100%;
+  }
 `;
 
 const Photo: FunctionComponent<{ href: string; src: string }> = ({
