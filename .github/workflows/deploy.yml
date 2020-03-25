@@ -5,15 +5,24 @@ on:
     branches: [source]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build and Deploy
+      - name: Install Dependencies
         uses: actions/setup-node@v1
       - run: yarn
+
+      - name: Build
       - run: yarn build
-      - run: yarn deploy
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: master
+
         env:
           CI: true
