@@ -13,9 +13,9 @@ jobs:
       - uses: fregante/setup-git-token@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v1
 
-      - name: Install Dependencies
-        uses: actions/setup-node@v1
+      - name: Install dependencies
         run: yarn
 
       - name: Build
