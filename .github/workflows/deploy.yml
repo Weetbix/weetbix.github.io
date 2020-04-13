@@ -14,12 +14,13 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v1
         with:
-          start: npm develop
+          start: npm run develop
           wait-on: http://localhost:8000
           wait-on-timeout: 120
 
   build-and-deploy:
     runs-on: ubuntu-latest
+    needs: test
 
     steps:
       - uses: actions/checkout@v2
