@@ -10,6 +10,7 @@
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.7",
+    "cypress": "^4.4.0",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.3.0",
     "gatsby-plugin-graphql-codegen": "^2.5.0",
@@ -27,6 +28,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
     "react-image-gallery": "^1.0.6",
+    "start-server-and-test": "^1.10.11",
     "styled-components": "^5.0.1"
   },
   "license": "MIT",
@@ -34,6 +36,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "cypress:open": "cypress open",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cypress:open",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
     "deploy": "gh-pages -d public -b master"
   },
