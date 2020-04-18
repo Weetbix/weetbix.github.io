@@ -14,7 +14,7 @@ Cardo helps you write meaningful and impactful messages on cards to your friends
 
 Cardo is an Android app written in Typescript, React Native and GraphQL, with an AWS Amplify backend.
 
-View Cardo on the Google Play Store!
+View Cardo on the [Google Play Store!](https://play.google.com/store/apps/details?id=com.johnhannagan.cardo)
 
 ## Features
 
