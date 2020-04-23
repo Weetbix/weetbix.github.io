@@ -3,7 +3,7 @@ layout: project
 title: Minicar Madness!
 caption: Arcade Racing
 summary: Minicar Madness is an old-school arcade styled racer inspired by titles such as Mario Kart and Diddy Kong Racing.
-video_url: http://www.youtube.com/embed/EBrldbPH7so?rel=0
+video_url: https://www.youtube.com/embed/EBrldbPH7so?rel=0
 order: 6
 foldername: minicarmadness
 category: University

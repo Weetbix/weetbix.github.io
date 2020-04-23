@@ -3,7 +3,7 @@ layout: project
 title: GravityBot
 caption: XNA Puzzle Game
 summary: A gravity based, platformer puzzle game using C# and XNA
-video_url: http://www.youtube.com/embed/4bE3q3vTNzE?rel=0
+video_url: https://www.youtube.com/embed/4bE3q3vTNzE?rel=0
 order: 3
 foldername: gravitybot
 category: University

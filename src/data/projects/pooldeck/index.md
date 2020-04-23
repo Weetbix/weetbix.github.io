@@ -3,7 +3,7 @@ layout: project
 title: Pool Deck Simulator
 caption: Simulator
 summary: A simulator. Including physics, emotions, AI, chats and affordances. Using C++, Ogre and Lua
-video_url: http://www.youtube.com/embed/VcyN5_KDVWc?rel=0
+video_url: https://www.youtube.com/embed/VcyN5_KDVWc?rel=0
 order: 2
 foldername: pooldeck
 category: University

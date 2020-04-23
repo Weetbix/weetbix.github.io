@@ -3,7 +3,7 @@ layout: project
 title: Driving Sim
 caption: Murdoch Driving Simulator
 summary: An on-going student project at Murdoch University
-video_url: http://www.youtube.com/embed/Ihrn9OICJlE
+video_url: https://www.youtube.com/embed/Ihrn9OICJlE
 order: 4
 foldername: drivingsim
 category: University
