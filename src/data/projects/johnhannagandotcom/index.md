@@ -2,7 +2,7 @@
 title: Portfolio Website
 summary: Personal website & portfolio
 date: 2020-3-5
-languages: Typescript, React, Gatsby, GraphQL, Cypress, Github Actions
+languages: Typescript, React, Gatsby, GraphQL, Cypress, Percy, Github Actions
 category: Other
 ---
 
@@ -18,6 +18,8 @@ This is a statically generated site build with React, Typescript, Gatsby and Gra
 - Cypress.io used for end to end tests
 - GitHub actions for CI/CD which:
   - Runs E2E tests
+  - Runs visual regression tests on all pages using [Percy](https://percy.io/)
+  - Dependabot automatic pull request opening / merging after CI passing
   - Deploys on new pushes to the `source` branch
 
 ## Open Source
