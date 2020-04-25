@@ -10,7 +10,7 @@ languages: Typescript, React Native, AWS Amplify, GraphQL
 
 ## Summary
 
-Cardo helps you write meaningful and impactful messages on cards to your friends, family and loves ones. With Cardo, you'll never struggle to find the perfect way to say Happy Birthday or Merry Christmas. Pick from over 10 different categories of messages, and explore until you find the perfect one for your card.
+Cardo helps you write meaningful and impactful messages on cards to your friends, family and loved ones. With Cardo, you'll never struggle to find the perfect way to say Happy Birthday or Merry Christmas. Pick from over 10 different categories of messages, and explore until you find the perfect one for your card.
 
 Cardo is an Android app written in Typescript, React Native and GraphQL, with an AWS Amplify backend.
 
