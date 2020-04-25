@@ -21,6 +21,7 @@ View Cardo on the [Google Play Store!](https://play.google.com/store/apps/detail
 - GraphQL backend with AWS Amplify
 - Anonymous authorization & admin accounts
 - Custom GraphQL resolvers written in velocity for user submitted message suggestions that require approval
+- App landing page at https://cardo.app
 
 ## Open Source
 
