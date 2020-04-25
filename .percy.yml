@@ -1,5 +1,6 @@
 version: 1
 snapshot:
+  widths: [1280]
   percy-css: |
     iframe { 
       display: none; 
