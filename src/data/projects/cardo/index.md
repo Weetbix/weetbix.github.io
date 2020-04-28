@@ -5,7 +5,7 @@ summary: Writing meaningful card messages made easy
 foldername: facebot
 category: Other
 date: 2020-4-13
-languages: Typescript, React Native, AWS Amplify, GraphQL
+languages: Typescript, React Native, AWS Amplify, GraphQL, Gatsby
 ---
 
 ## Summary
