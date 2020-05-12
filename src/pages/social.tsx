@@ -9,8 +9,8 @@ const PageContainer = styled.div`
   align-items: center;
   height: 100%;
   color: #303030;
-  padding-left: 35%;
-  padding-right: 35%;
+  padding-left: 25%;
+  padding-right: 25%;
 
   a,
   a:visited,
