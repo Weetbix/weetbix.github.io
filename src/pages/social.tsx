@@ -1,5 +1,5 @@
 import * as React from "react";
-import { FaFlickr, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFlickr, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 import styled from "styled-components";
 import Page from "../components/Page";
 
@@ -38,8 +38,11 @@ const SocialPage: React.FunctionComponent<{}> = () => {
         <a href="https://github.com/Weetbix">
           <FaGithub size="100px" />
         </a>
-        <a href="http://instagram.com/adv_travel">
+        <a href="https://instagram.com/adv_travel">
           <FaInstagram size="100px" />
+        </a>
+        <a href="https://www.youtube.com/user/weetbixiron">
+          <FaYoutube size="100px" />
         </a>
       </PageContainer>
     </Page>
