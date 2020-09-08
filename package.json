@@ -19,7 +19,7 @@
     "gatsby-plugin-styled-components": "^3.3.0",
     "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-remark-figure-caption": "^2.0.0",
-    "gatsby-source-filesystem": "^2.3.0",
+    "gatsby-source-filesystem": "^2.3.28",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.5.0",
     "prop-types": "^15.7.2",
