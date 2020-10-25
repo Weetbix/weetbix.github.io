@@ -10,7 +10,10 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: `johnhannagan.com`,
-        customDomain: `plausible.cloud.johnhannagan.com`,
+        // Currently when using a custom domain with self-hosted plausible, the script
+        // path will incorrectly point to index.js. Here we force the correct path...
+        // https://github.com/pixelplicity/gatsby-plugin-plausible/issues/49
+        customDomain: `plausible.cloud.johnhannagan.com/js/plausible.js?original=`,
       },
     },
     {
