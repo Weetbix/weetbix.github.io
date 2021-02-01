@@ -22,6 +22,7 @@ const StyledPage = styled(CenteredPage)`
   }
   div.image-gallery {
     margin-top: 65px;
+    margin-bottom: 65px;
   }
 
   @media (max-width: 768px) {
@@ -54,7 +55,7 @@ const Video: React.FunctionComponent<{ src: string }> = ({ src }) => (
 );
 
 const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
-  data: { project }
+  data: { project },
 }) => {
   return (
     <StyledPage>
@@ -68,8 +69,8 @@ const ProjectPage: React.FunctionComponent<{ data: ProjectPageQuery }> = ({
       <div dangerouslySetInnerHTML={{ __html: project.html }} />
       {project.fields.screenshots?.length ? (
         <ImageGallery
-          items={project.fields.screenshots.map(screenshot => ({
-            original: screenshot.publicURL
+          items={project.fields.screenshots.map((screenshot) => ({
+            original: screenshot.publicURL,
           }))}
           showThumbnails={false}
           showFullscreenButton={false}

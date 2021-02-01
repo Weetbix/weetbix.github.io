@@ -1,7 +1,7 @@
 ---
 title: Portfolio Website
 summary: Personal website & portfolio
-date: 2020-3-5
+date: 2020-03-05
 languages: Typescript, React, Gatsby, GraphQL, Cypress, Percy, Github Actions
 category: Other
 ---
