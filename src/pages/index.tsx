@@ -35,9 +35,9 @@ interface IndexPageProps {
   };
 }
 
-const HomePage: React.FunctionComponent<IndexPageProps> = props => {
+const HomePage: React.FunctionComponent<IndexPageProps> = (props) => {
   return (
-    <StyledPage>
+    <StyledPage showBack={false}>
       <h1>
         I am a software engineer with over 9 years of experience in various
         industries and technologies. Recently I enjoy bringing meaningful
