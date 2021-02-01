@@ -5,7 +5,7 @@ import { PhotostoryPageQuery } from "../../graphql-types";
 import CenteredPage from "../components/CenteredPage";
 
 const StyledPage = styled(CenteredPage)`
-  margin-top: 180px;
+  margin-top: 160px;
   margin-bottom: 180px;
 
   text-align: justify;
@@ -30,7 +30,7 @@ const PhotostoryPage: React.FunctionComponent<{
 }> = ({ data: { photostories } }) => {
   return (
     <StyledPage>
-      {photostories.nodes.map(photostory => {
+      {photostories.nodes.map((photostory) => {
         return (
           <>
             <h1>{photostory.frontmatter.title}</h1>
