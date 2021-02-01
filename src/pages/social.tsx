@@ -1,9 +1,11 @@
 import * as React from "react";
 import { FaFlickr, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 import styled from "styled-components";
+import CenteredPage from "../components/CenteredPage";
 import Page from "../components/Page";
 
-const PageContainer = styled.div`
+const PageContainer = styled(CenteredPage)`
+  margin-top: -100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
