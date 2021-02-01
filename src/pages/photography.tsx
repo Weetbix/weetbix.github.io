@@ -12,7 +12,7 @@ const Paragraph = styled.p`
 const PageHeader = styled.h1`
   && {
     line-height: 30px;
-    margin-top: 300px;
+    margin-top: 180px;
   }
 
   @media (max-width: 768px) {
@@ -35,7 +35,7 @@ const PhotoContainer = styled.div`
 
 const Photo: FunctionComponent<{ href: string; src: string }> = ({
   href,
-  src
+  src,
 }) => {
   return (
     <PhotoContainer>
@@ -62,7 +62,7 @@ const PhotographyPage: FunctionComponent<{
         <br />
         <br />
         <span>
-          {photostories.categories.map(category => {
+          {photostories.categories.map((category) => {
             return (
               <a href={`/photography/photostories/${category}/`}>
                 {uppercaseFirstLetter(category)}
@@ -72,10 +72,10 @@ const PhotographyPage: FunctionComponent<{
         </span>
       </Paragraph>
 
-      {galleryData.map(galleryCategory => (
+      {galleryData.map((galleryCategory) => (
         <>
           <h1>{galleryCategory.title}</h1>
-          {galleryCategory.photos.map(photo => (
+          {galleryCategory.photos.map((photo) => (
             <Photo {...photo} />
           ))}
         </>
