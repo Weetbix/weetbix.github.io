@@ -21,7 +21,10 @@ The key features of this project is that it lets you view games that are crosspl
 - Fully static site built with GatsbyJS
 - Infrastructure managed with Terraform
 - Deployed to AWS (using S3, Cloudfront, ACM and Route 53)
-- CI/CD with GitHub Actions + Terraform
+- CI/CD with GitHub Actions:
+  - Runs E2E tests with Cypress
+  - Dependabot automatic pull request opening / merging after CI passing
+  - Deploys with Terraform on new pushes to the `main` branch
 
 ## Open Source
 
