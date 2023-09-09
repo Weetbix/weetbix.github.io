@@ -10,7 +10,6 @@ context("Homepage", () => {
   it("should have the links to the other pages", () => {
     cy.contains("a", "Projects");
     cy.contains("a", "Photography");
-    cy.contains("a", "Social");
   });
 
   it("clicking projects should go to projects", () => {
@@ -21,10 +20,5 @@ context("Homepage", () => {
   it("clicking photography should go to photgraphy", () => {
     cy.contains("a", "Photography").click();
     cy.location("pathname").should("include", "photography");
-  });
-
-  it("clicking social should go to social", () => {
-    cy.contains("a", "Social").click();
-    cy.location("pathname").should("include", "social");
   });
 });
