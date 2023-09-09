@@ -49,6 +49,9 @@ const HomePage: React.FunctionComponent<IndexPageProps> = (props) => {
         <h1>
           <Link to="/photography">Photography</Link>
         </h1>
+        <h1>
+          <Link to="https://github.com/weetbix">GitHub</Link>
+        </h1>
       </LinkContainer>
     </StyledPage>
   );

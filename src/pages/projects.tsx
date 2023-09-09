@@ -8,7 +8,7 @@ import ProjectSummary from "../components/ProjectSummary";
 const PageHeader = styled.h1`
   line-height: 30px;
   margin-top: 180px;
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 
   @media (max-width: 768px) {
     margin-top: 80px;
@@ -17,7 +17,7 @@ const PageHeader = styled.h1`
 `;
 
 const StyledProjectSummary = styled(ProjectSummary)`
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 
   &:hover {
     transform: scale(1.01);
