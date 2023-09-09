@@ -16,13 +16,13 @@
     "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-plausible": "^0.0.7",
     "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-plugin-sharp": "^2.6.0",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-styled-components": "^3.10.0",
     "gatsby-plugin-typescript": "^2.12.0",
     "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-remark": "^2.16.0",
-    "gatsby-transformer-sharp": "^2.12.0",
+    "gatsby-transformer-sharp": "^2.12.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -31,7 +31,8 @@
     "react-image-gallery": "^1.0.7",
     "start-server-and-test": "^1.12.0",
     "styled-components": "^5.2.1",
-    "typescript": "^4.2.2"
+    "typescript": "^4.2.2",
+    "value-or-promise": "^1.0.12"
   },
   "license": "MIT",
   "main": "n/a",
@@ -46,5 +47,9 @@
   "devDependencies": {
     "gh-pages": "^3.1.0",
     "prettier": "^2.2.1"
+  },
+  "resolutions": {
+    "sharp": "^0.29.0",
+    "**/sharp": "^0.29.0"
   }
 }
