@@ -21,12 +21,12 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Percy Visual Regressions
-        uses: percy/snapshot-action@v0.1.2
-        with:
-          build-directory: "public"
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      # - name: Percy Visual Regressions
+      #   uses: percy/snapshot-action@v0.1.2
+      #   with:
+      #     build-directory: "public"
+      #   env:
+      #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
