@@ -4,7 +4,7 @@ context("Homepage", () => {
   });
 
   it("should render the summary", () => {
-    cy.contains("software engineer with over 9 years");
+    cy.contains("I am a software engineer who enjoys bringing");
   });
 
   it("should have the links to the other pages", () => {
